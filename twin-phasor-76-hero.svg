@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">Twin Phasor 76</title>
+  <desc id="desc">A vintage-inspired blue analog effects panel with twin phasor controls and orbiting wave lines.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11152f"/>
+      <stop offset="1" stop-color="#202b65"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4059b5"/>
+      <stop offset="1" stop-color="#26377e"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#88a6ff" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#88a6ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".55" fill="#fff" opacity=".10"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="480" rx="24" fill="url(#bg)"/>
+  <circle cx="850" cy="210" r="270" fill="url(#glow)"/>
+  <ellipse cx="850" cy="420" rx="330" ry="24" fill="#050817" opacity=".45" filter="url(#shadow)"/>
+
+  <!-- Orbiting phasor traces -->
+  <g fill="none" stroke-linecap="round">
+    <ellipse cx="865" cy="224" rx="255" ry="94" stroke="#8ea7ff" stroke-width="2" opacity=".65" transform="rotate(-24 865 224)"/>
+    <ellipse cx="865" cy="224" rx="255" ry="94" stroke="#e3b66a" stroke-width="2" opacity=".75" transform="rotate(24 865 224)"/>
+    <ellipse cx="865" cy="224" rx="190" ry="70" stroke="#c9d5ff" stroke-width="1.5" opacity=".48" transform="rotate(56 865 224)"/>
+    <path d="M620 240 C700 80 780 80 860 240 S1020 400 1100 240" stroke="#8ea7ff" stroke-width="2.5" opacity=".8"/>
+    <path d="M620 210 C700 370 780 370 860 210 S1020 50 1100 210" stroke="#e3b66a" stroke-width="2" opacity=".8"/>
+  </g>
+
+  <!-- Instrument panel -->
+  <g transform="translate(650 78) rotate(-3 220 160)">
+    <rect x="8" y="12" width="440" height="300" rx="15" fill="#070b20" opacity=".5"/>
+    <rect width="440" height="300" rx="13" fill="url(#panel)" stroke="#9aabe8" stroke-opacity=".55" stroke-width="2"/>
+    <rect x="10" y="10" width="420" height="280" rx="8" fill="url(#grain)" opacity=".6"/>
+    <path d="M22 53 H418 M22 151 H418 M22 250 H418" stroke="#f0e9d8" stroke-width="1.2" opacity=".75"/>
+    <g fill="#f4eddd" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">
+      <text x="22" y="35" font-size="13" font-weight="bold">TWIN PHASOR 76</text>
+      <text x="22" y="75" font-size="10">SWEEP GEN 1</text>
+      <text x="235" y="75" font-size="10">SWEEP GEN 2</text>
+      <text x="22" y="174" font-size="10">PHASOR A</text>
+      <text x="235" y="174" font-size="10">PHASOR B</text>
+      <text x="22" y="274" font-size="10">VINTAGE / MODERN</text>
+      <text x="418" y="274" font-size="9" text-anchor="end">ANALOG SPIRIT · DIGITAL CONTROL</text>
+    </g>
+    <g fill="#18224f" stroke="#f2ead9" stroke-width="2">
+      <circle cx="82" cy="111" r="25"/><circle cx="294" cy="111" r="25"/>
+      <circle cx="82" cy="210" r="28"/><circle cx="294" cy="210" r="28"/>
+    </g>
+    <g stroke="#e8b96c" stroke-width="4" stroke-linecap="round">
+      <path d="M82 111 L91 91"/><path d="M294 111 L282 94"/>
+      <path d="M82 210 L99 190"/><path d="M294 210 L277 192"/>
+    </g>
+    <g fill="#e8b96c">
+      <circle cx="154" cy="111" r="5"/><circle cx="366" cy="111" r="5"/>
+      <circle cx="154" cy="210" r="5"/><circle cx="366" cy="210" r="5"/>
+    </g>
+    <g fill="#f3ead8" opacity=".9">
+      <rect x="120" y="93" width="54" height="8" rx="4"/>
+      <rect x="332" y="93" width="54" height="8" rx="4"/>
+      <rect x="120" y="195" width="54" height="8" rx="4"/>
+      <rect x="332" y="195" width="54" height="8" rx="4"/>
+    </g>
+    <g fill="#101735" stroke="#f4eddd" stroke-opacity=".65">
+      <rect x="205" y="88" width="30" height="45" rx="5"/>
+      <rect x="205" y="188" width="30" height="45" rx="5"/>
+    </g>
+    <g fill="#e76d5e">
+      <circle cx="220" cy="99" r="4"/><circle cx="220" cy="199" r="4"/>
+    </g>
+    <g fill="#f3ead8" font-family="Arial, Helvetica, sans-serif" font-size="8" letter-spacing="1">
+      <text x="22" y="141">RATE</text><text x="235" y="141">RATE</text>
+      <text x="22" y="239">DEPTH / FEEDBACK</text><text x="235" y="239">DEPTH / FEEDBACK</text>
+    </g>
+    <g fill="#e8b96c">
+      <circle cx="38" cy="284" r="3"/><circle cx="54" cy="284" r="3"/>
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="72" y="112" fill="#e9bd72" font-size="14" font-weight="bold" letter-spacing="5">A MAX FOR LIVE INSTRUMENT</text>
+    <text x="68" y="196" fill="#f4eddd" font-size="58" font-weight="800" letter-spacing="-2">TWIN PHASOR</text>
+    <text x="72" y="255" fill="#f4eddd" font-size="48" font-weight="300" letter-spacing="8">76</text>
+    <path d="M72 286 H440" stroke="#e9bd72" stroke-width="2" opacity=".8"/>
+    <text x="72" y="326" fill="#cbd5ff" font-size="17" letter-spacing="2">TWO PHASORS. SIX STAGES EACH.</text>
+    <text x="72" y="356" fill="#cbd5ff" font-size="15" opacity=".8">DUBWISE MOTION · OPTICAL CHARACTER · STEREO SPACE</text>
+    <text x="72" y="425" fill="#e9bd72" font-size="11" letter-spacing="3">INSPIRED BY THE 1975 BI-PHASE</text>
+  </g>
+
+  <!-- Corner screws -->
+  <g fill="#d7d0c1" stroke="#28346e" stroke-width="2">
+    <circle cx="28" cy="28" r="6"/><circle cx="1172" cy="28" r="6"/>
+    <circle cx="28" cy="452" r="6"/><circle cx="1172" cy="452" r="6"/>
+  </g>
+  <g stroke="#28346e" stroke-width="1.5">
+    <path d="M24 28 H32 M28 24 V32 M1168 28 H1176 M1172 24 V32 M24 452 H32 M28 448 V456 M1168 452 H1176 M1172 448 V456"/>
+  </g>
+</svg>
