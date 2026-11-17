@@ -33,6 +33,28 @@ It brings the character of that classic machine into Max for Live, while keeping
 | **Output** | Stereo, mono and separate processed bus |
 | **Control** | Live parameters, MIDI mapping, key mapping and Push banks |
 
+## Inside the sound
+
+![Twin Phasor 76 device layout](docs/panel_layout_preview.png)
+
+<sub>Static layout render from the build script: a design reference, not a screenshot from Live.</sub>
+
+![Signal flow](assets/twin-phasor-signal-flow.svg)
+
+![Frequency response at three sweep positions](docs/img/frequency_response.png)
+
+<sub>Each phasor carves three notches that move together with the sweep. Feedback turns the gaps between them into resonant peaks.</sub>
+
+![Photocell lag](docs/img/photocell_lag.png)
+
+<sub>In VINTAGE, the modelled photocells light quickly and darken slowly, so a square sweep snaps and then slides.</sub>
+
+![Envelope sweep](docs/img/envelope_sweep.png)
+
+<sub>With ENV, each offbeat chord pushes the sweep up and the release lets it fall back, while an LFO drifts on its own.</sub>
+
+<sub>The plots are generated from the shipped gen~ code by `tools/make_readme_plots.py`. They are simulations, not hardware measurements.</sub>
+
 ## Install
 
 1. Copy `Twin Phasor 76.amxd` into your Live User Library, for example:
@@ -156,6 +178,28 @@ node tests/render_auditions.js out/
 - `src/build_device.py` rebuilds both devices.
 - `tests/run_tests.py` runs the static and DSP suites.
 - `tests/render_auditions.js` renders the A/B audition WAVs.
+
+## Validation and limitations
+
+The automated suites run the shipped gen~ code through an offline translation and check the device files statically. **49 of 49 tests pass**, covering:
+- stability and finite output;
+- notch positions;
+- clicks on switching and under fast automation;
+- denormals;
+- parameter ranges;
+- routing;
+- preset compatibility;
+- reproducible builds.
+
+This is simulation, not native Live testing. In Live, loading is confirmed and the remaining checks are in progress.
+
+Known limitations:
+- Photocell constants are estimates, not measured on an original unit.
+- No comparison against real hardware has been made.
+- ENV listens to the device input; there's no sidechain.
+- The legacy Return device relies on unsupported `send~`/`receive~`.
+
+Twin Phasor 76 is a **circuit-informed model, not a hardware clone**. It is not affiliated with or endorsed by Musitronics, Mu-Tron, or the estate of Lee "Scratch" Perry; those names are used only to describe the historical reference.
 
 For implementation details and project status, see [`ENGINEERING.md`](ENGINEERING.md), [`docs/SPRINT_REPORT.md`](docs/SPRINT_REPORT.md), [`docs/OWNER_TESTS.md`](docs/OWNER_TESTS.md), and [`CHANGELOG.md`](CHANGELOG.md).
 

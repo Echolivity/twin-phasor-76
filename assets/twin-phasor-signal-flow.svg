@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470">
+<rect width="1200" height="470" rx="24" fill="#22336f"/>
+<text x="56" y="60" fill="#a8cae8" font-family="Arial,sans-serif" font-size="17" letter-spacing="4">SIGNAL FLOW / TWIN PHASOR 76</text>
+<g font-family="Arial,sans-serif">
+<g fill="#3750a9" stroke="#f4f4f1" stroke-width="2">
+<rect x="48" y="170" width="140" height="110" rx="14"/>
+<rect x="240" y="150" width="210" height="150" rx="14"/>
+<rect x="500" y="170" width="140" height="110" rx="14" fill="#2f3134"/>
+<rect x="690" y="150" width="210" height="150" rx="14"/>
+<rect x="950" y="170" width="200" height="110" rx="14"/>
+</g>
+<g fill="#f4f4f1" font-size="20" font-weight="700" text-anchor="middle">
+<text x="118" y="220">INPUT</text><text x="345" y="200">PHASOR A</text><text x="570" y="212">B INPUT</text><text x="795" y="200">PHASOR B</text><text x="1050" y="212">OUTPUT</text>
+</g>
+<g fill="#dfe6f5" font-size="14" text-anchor="middle">
+<text x="118" y="246">L / L+R · R</text>
+<text x="345" y="228">6 optical all-pass stages</text><text x="345" y="250">feedback · photocell lag</text><text x="345" y="272">mix / full wet</text>
+<text x="570" y="238">IN A · OUT A</text><text x="570" y="258">IN B</text>
+<text x="795" y="228">6 optical all-pass stages</text><text x="795" y="250">feedback · photocell lag</text><text x="795" y="272">mix / full wet</text>
+<text x="1050" y="236">A|B stereo · B · A · A+B</text><text x="1050" y="258">Track · Dry+Bus (out 3/4)</text>
+</g>
+<g fill="none" stroke="#f4f4f1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M188 225H232m-10 -9 10 9 -10 9M450 225H492m-10 -9 10 9 -10 9M640 225H682m-10 -9 10 9 -10 9M900 225H942m-10 -9 10 9 -10 9"/>
+</g>
+<g fill="#2f3134" stroke="#a8cae8" stroke-width="2"><rect x="240" y="350" width="210" height="64" rx="12"/><rect x="690" y="350" width="210" height="64" rx="12"/></g>
+<g fill="#f4f4f1" font-size="15" font-weight="700" text-anchor="middle"><text x="345" y="377">SWEEP A</text><text x="795" y="377">SWEEP B</text></g>
+<g fill="#a8cae8" font-size="13" text-anchor="middle"><text x="345" y="399">GEN 1 · PEDAL · ENV</text><text x="795" y="399">GEN 1 · GEN 2 · PEDAL · ENV</text></g>
+<g stroke="#a8cae8" stroke-width="2.5" stroke-dasharray="6 6"><path d="M345 350V302M795 350V302"/></g>
+<rect x="500" y="356" width="140" height="52" rx="10" fill="#e72e24"/><text x="570" y="380" fill="#f4f4f1" font-size="14" font-weight="700" text-anchor="middle">SWEEP SYNC</text><text x="570" y="398" fill="#f4f4f1" font-size="12" text-anchor="middle">NORM · REV · QUAD</text>
+<path d="M450 382H500M640 382H690" stroke="#e72e24" stroke-width="2.5"/>
+<text x="56" y="120" fill="#c3cfee" font-size="14" letter-spacing="1">CHARACTER: VINTAGE (10 switchable quirks) · MODERN (clean, matched)</text>
+</g>
+<text x="56" y="448" fill="#9fb0dc" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">CONCEPTUAL SIGNAL-FLOW OVERVIEW · NOT A CIRCUIT SCHEMATIC</text>
+</svg>
