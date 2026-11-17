@@ -1,0 +1,6 @@
+tests/build/
+tests/results/
+__pycache__/
+*.pyc
+auditions/
+.DS_Store
