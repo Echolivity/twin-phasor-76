@@ -1,5 +1,11 @@
 # Changelog: Twin Phasor 76
 
+## UI redesign (2026-11-18, branch `ui-redesign`, untested in Live)
+- New graphite interface: blue for Phasor A, amber for Phasor B, neutral for shared controls; larger primary dials; sections regrouped as Phasor A · Modulation · Phasor B · Output · Character; a header readout that follows B Input; Info View descriptions on every control.
+- The original Bi-Phase colours remain available as `--theme classic`.
+- Parameters unchanged: names, ranges, defaults, options, units, object IDs and order match S4 (test B14). The only display change: A On / B On read OFF/ON.
+- DSP unchanged. See `docs/UI.md`.
+
 ## S4 (2026-11-17)
 - Push/bank order is now performance-first, with named banks (Perform, Switch, Envelope, Output, Quirks 1–2). Saved values and sound are unchanged; only the Push layout differs.
 - README: MIDI/key mapping and Push section, colour notes. `docs/OWNER_TESTS.md` results sheet.

@@ -1,0 +1,878 @@
+{
+ "Twin Phasor 76": {
+  "220k range": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "RANGE",
+    "RANGE"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "220k range",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "RANGE",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-132",
+   "s4_order": 32
+  },
+  "A Depth": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    80
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "A Depth",
+   "parameter_mmax": 100,
+   "parameter_mmin": 0,
+   "parameter_shortname": "A Depth",
+   "parameter_type": 0,
+   "parameter_unitstyle": 5,
+   "s4_id": "obj-20",
+   "s4_order": 3
+  },
+  "A Feedback": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    35
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "A Feedback",
+   "parameter_mmax": 100,
+   "parameter_mmin": 0,
+   "parameter_shortname": "A Fdbk",
+   "parameter_type": 0,
+   "parameter_unitstyle": 5,
+   "s4_id": "obj-23",
+   "s4_order": 4
+  },
+  "A On": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "PHASOR A",
+    "PHASOR A"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "A On",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "A On",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-30",
+   "s4_order": 6
+  },
+  "A Sweep": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "GEN 1",
+    "PED",
+    "ENV"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "A Sweep",
+   "parameter_mmax": 2,
+   "parameter_mmin": null,
+   "parameter_shortname": "A Sweep",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-28",
+   "s4_order": 5
+  },
+  "B Depth": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    80
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "B Depth",
+   "parameter_mmax": 100,
+   "parameter_mmin": 0,
+   "parameter_shortname": "B Depth",
+   "parameter_type": 0,
+   "parameter_unitstyle": 5,
+   "s4_id": "obj-42",
+   "s4_order": 7
+  },
+  "B Feedback": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    35
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "B Feedback",
+   "parameter_mmax": 100,
+   "parameter_mmin": 0,
+   "parameter_shortname": "B Fdbk",
+   "parameter_type": 0,
+   "parameter_unitstyle": 5,
+   "s4_id": "obj-45",
+   "s4_order": 8
+  },
+  "B Input": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "IN A",
+    "OUT A",
+    "IN B"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "B Input",
+   "parameter_mmax": 2,
+   "parameter_mmin": null,
+   "parameter_shortname": "B Input",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-53",
+   "s4_order": 10
+  },
+  "B On": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "PHASOR B",
+    "PHASOR B"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "B On",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "B On",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-59",
+   "s4_order": 12
+  },
+  "B Sweep": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "G1",
+    "G2",
+    "PED",
+    "ENV"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "B Sweep",
+   "parameter_mmax": 3,
+   "parameter_mmin": null,
+   "parameter_shortname": "B Sweep",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-57",
+   "s4_order": 11
+  },
+  "B Sync": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "NORM",
+    "REV",
+    "QUAD"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "B Sync",
+   "parameter_mmax": 2,
+   "parameter_mmin": null,
+   "parameter_shortname": "B Sync",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-49",
+   "s4_order": 9
+  },
+  "Bus": {
+   "maxclass": "live.menu",
+   "parameter_enum": [
+    "Bus 1",
+    "Bus 2",
+    "Bus 3",
+    "Bus 4",
+    "Bus 5",
+    "Bus 6",
+    "Bus 7",
+    "Bus 8"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Bus",
+   "parameter_mmax": 7,
+   "parameter_mmin": null,
+   "parameter_shortname": "Bus",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-113",
+   "s4_order": 27
+  },
+  "Cell mismatch": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "CELLS",
+    "CELLS"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Cell mismatch",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "CELLS",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-128",
+   "s4_order": 30
+  },
+  "Character": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "VINTAGE",
+    "MODERN"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Character",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "Character",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-124",
+   "s4_order": 28
+  },
+  "Circuit bandwidth": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "BW",
+    "BW"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Circuit bandwidth",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "BW",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-144",
+   "s4_order": 38
+  },
+  "Drive": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Drive",
+   "parameter_mmax": 24,
+   "parameter_mmin": -24,
+   "parameter_shortname": "Drive",
+   "parameter_type": 0,
+   "parameter_unitstyle": 4,
+   "s4_id": "obj-99",
+   "s4_order": 21
+  },
+  "Env Amount": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    50
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Env Amount",
+   "parameter_mmax": 100,
+   "parameter_mmin": 0,
+   "parameter_shortname": "Env Amt",
+   "parameter_type": 0,
+   "parameter_unitstyle": 5,
+   "s4_id": "obj-78",
+   "s4_order": 15
+  },
+  "Env Attack": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 2.0,
+   "parameter_initial": [
+    10
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Env Attack",
+   "parameter_mmax": 100,
+   "parameter_mmin": 1,
+   "parameter_shortname": "Env Atk",
+   "parameter_type": 0,
+   "parameter_unitstyle": 2,
+   "s4_id": "obj-81",
+   "s4_order": 16
+  },
+  "Env Polarity": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "UP",
+    "DOWN"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Env Polarity",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "Env Pol",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-85",
+   "s4_order": 18
+  },
+  "Env Release": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 2.0,
+   "parameter_initial": [
+    250
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Env Release",
+   "parameter_mmax": 2000,
+   "parameter_mmin": 20,
+   "parameter_shortname": "Env Rel",
+   "parameter_type": 0,
+   "parameter_unitstyle": 2,
+   "s4_id": "obj-83",
+   "s4_order": 17
+  },
+  "Full Wet": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "FULL WET",
+    "FULL WET"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Full Wet",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "FullWet",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-103",
+   "s4_order": 23
+  },
+  "Gen1 Rate": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 3.0,
+   "parameter_initial": [
+    0.6
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Gen1 Rate",
+   "parameter_mmax": 18.0,
+   "parameter_mmin": 0.1,
+   "parameter_shortname": "G1 Rate",
+   "parameter_type": 0,
+   "parameter_unitstyle": 3,
+   "s4_id": "obj-10",
+   "s4_order": 0
+  },
+  "Gen1 Rate Src": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "MAN",
+    "PED"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Gen1 Rate Src",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "G1 Src",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-16",
+   "s4_order": 2
+  },
+  "Gen1 Shape": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "SINE",
+    "SQR"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Gen1 Shape",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "G1 Shape",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-13",
+   "s4_order": 1
+  },
+  "Gen2 Rate": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 3.0,
+   "parameter_initial": [
+    3.5
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Gen2 Rate",
+   "parameter_mmax": 18.0,
+   "parameter_mmin": 0.1,
+   "parameter_shortname": "G2 Rate",
+   "parameter_type": 0,
+   "parameter_unitstyle": 3,
+   "s4_id": "obj-71",
+   "s4_order": 13
+  },
+  "Gen2 Shape": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "SINE",
+    "SQR"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Gen2 Shape",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "G2 Shape",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-74",
+   "s4_order": 14
+  },
+  "Hiss": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "HISS",
+    "HISS"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Hiss",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "HISS",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-136",
+   "s4_order": 34
+  },
+  "Hum Freq": {
+   "maxclass": "live.tab",
+   "parameter_enum": [
+    "50",
+    "60"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Hum Freq",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "Hum Hz",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-147",
+   "s4_order": 39
+  },
+  "In A Sum": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "IN A = L",
+    "IN A = L+R"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "In A Sum",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "InSum",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-107",
+   "s4_order": 25
+  },
+  "LED sweep law": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "LAW",
+    "LAW"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "LED sweep law",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "LAW",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-130",
+   "s4_order": 31
+  },
+  "Mains hum": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "HUM",
+    "HUM"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Mains hum",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "HUM",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-138",
+   "s4_order": 35
+  },
+  "Mix": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    50
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Mix",
+   "parameter_mmax": 100,
+   "parameter_mmin": 0,
+   "parameter_shortname": "Mix",
+   "parameter_type": 0,
+   "parameter_unitstyle": 5,
+   "s4_id": "obj-96",
+   "s4_order": 20
+  },
+  "Modern Hi": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 3.0,
+   "parameter_initial": [
+    9000
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Modern Hi",
+   "parameter_mmax": 18000,
+   "parameter_mmin": 500,
+   "parameter_shortname": "Mod Hi",
+   "parameter_type": 0,
+   "parameter_unitstyle": 3,
+   "s4_id": "obj-152",
+   "s4_order": 41
+  },
+  "Modern Lo": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 3.0,
+   "parameter_initial": [
+    150
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Modern Lo",
+   "parameter_mmax": 2000,
+   "parameter_mmin": 20,
+   "parameter_shortname": "Mod Lo",
+   "parameter_type": 0,
+   "parameter_unitstyle": 3,
+   "s4_id": "obj-150",
+   "s4_order": 40
+  },
+  "Op-amp clip": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "CLIP",
+    "CLIP"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Op-amp clip",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "CLIP",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-134",
+   "s4_order": 33
+  },
+  "Optical bypass": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "FADE",
+    "FADE"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Optical bypass",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "FADE",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-140",
+   "s4_order": 36
+  },
+  "Out Mode": {
+   "maxclass": "live.menu",
+   "parameter_enum": [
+    "Out A | Out B",
+    "Out B (mono)",
+    "Out A (mono)",
+    "A + B (mono)"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Out Mode",
+   "parameter_mmax": 3,
+   "parameter_mmin": null,
+   "parameter_shortname": "OutMode",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-105",
+   "s4_order": 24
+  },
+  "Output": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Output",
+   "parameter_mmax": 12,
+   "parameter_mmin": -24,
+   "parameter_shortname": "Output",
+   "parameter_type": 0,
+   "parameter_unitstyle": 4,
+   "s4_id": "obj-101",
+   "s4_order": 22
+  },
+  "Pedal": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    50
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Pedal",
+   "parameter_mmax": 100,
+   "parameter_mmin": 0,
+   "parameter_shortname": "Pedal",
+   "parameter_type": 0,
+   "parameter_unitstyle": 5,
+   "s4_id": "obj-89",
+   "s4_order": 19
+  },
+  "Photocell lag": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "LAG",
+    "LAG"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Photocell lag",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "LAG",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-126",
+   "s4_order": 29
+  },
+  "Route": {
+   "maxclass": "live.menu",
+   "parameter_enum": [
+    "Track",
+    "Dry + Bus",
+    "Bus only"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Route",
+   "parameter_mmax": 2,
+   "parameter_mmin": null,
+   "parameter_shortname": "Route",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-110",
+   "s4_order": 26
+  },
+  "Shaped tri LFO": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "LFO",
+    "LFO"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    1
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Shaped tri LFO",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "LFO",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-142",
+   "s4_order": 37
+  }
+ },
+ "Twin Phasor Return": {
+  "Return Bus": {
+   "maxclass": "live.menu",
+   "parameter_enum": [
+    "Bus 1",
+    "Bus 2",
+    "Bus 3",
+    "Bus 4",
+    "Bus 5",
+    "Bus 6",
+    "Bus 7",
+    "Bus 8"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Return Bus",
+   "parameter_mmax": 7,
+   "parameter_mmin": null,
+   "parameter_shortname": "Bus",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-16",
+   "s4_order": 0
+  },
+  "Return Level": {
+   "maxclass": "live.dial",
+   "parameter_enum": null,
+   "parameter_exponent": 1.0,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Return Level",
+   "parameter_mmax": 12,
+   "parameter_mmin": -70,
+   "parameter_shortname": "Level",
+   "parameter_type": 0,
+   "parameter_unitstyle": 4,
+   "s4_id": "obj-17",
+   "s4_order": 1
+  },
+  "Track Thru": {
+   "maxclass": "live.text",
+   "parameter_enum": [
+    "TRACK INPUT OFF",
+    "TRACK INPUT ON"
+   ],
+   "parameter_exponent": null,
+   "parameter_initial": [
+    0
+   ],
+   "parameter_invisible": null,
+   "parameter_longname": "Track Thru",
+   "parameter_mmax": 1,
+   "parameter_mmin": null,
+   "parameter_shortname": "Thru",
+   "parameter_type": 2,
+   "parameter_unitstyle": null,
+   "s4_id": "obj-18",
+   "s4_order": 2
+  }
+ }
+}

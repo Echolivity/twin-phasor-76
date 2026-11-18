@@ -37,7 +37,7 @@ It brings the character of that classic machine into Max for Live, while keeping
 
 ![Twin Phasor 76 device layout](docs/panel_layout_preview.png)
 
-<sub>Static layout render from the build script: a design reference, not a screenshot from Live.</sub>
+<sub>The redesigned interface (graphite theme), rendered from the build data; not a screenshot from Live. Interface guide and the parameter mapping: [`docs/UI.md`](docs/UI.md).</sub>
 
 ![Signal flow](assets/twin-phasor-signal-flow.svg)
 

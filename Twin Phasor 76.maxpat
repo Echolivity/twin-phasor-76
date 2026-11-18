@@ -18,7 +18,7 @@
   "openrect": [
    0.0,
    0.0,
-   1064,
+   1144,
    169
   ],
   "bglocked": 0,
@@ -44,7 +44,7 @@
   "boxanimatetime": 200,
   "enablehscroll": 1,
   "enablevscroll": 1,
-  "devicewidth": 1064,
+  "devicewidth": 1144,
   "description": "Dual 6-stage optical phasor modelled on the 1975 Bi-Phase circuit, with switchable vintage quirks.",
   "digest": "",
   "tags": "",
@@ -427,21 +427,21 @@
      "patching_rect": [
       700,
       0,
-      1064,
+      1144,
       169
      ],
      "presentation": 1,
      "presentation_rect": [
       0,
       0,
-      1064,
+      1144,
       169
      ],
      "mode": 0,
      "bgcolor": [
-      0.788,
-      0.792,
-      0.8,
+      0.106,
+      0.11,
+      0.122,
       1.0
      ],
      "border": 0,
@@ -450,9 +450,9 @@
      "bgfillcolor": {
       "type": "color",
       "color": [
-       0.788,
-       0.792,
-       0.8,
+       0.106,
+       0.11,
+       0.122,
        1.0
       ]
      }
@@ -461,133 +461,687 @@
    {
     "box": {
      "id": "obj-7",
-     "maxclass": "panel",
+     "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
+     "fontname": "Ableton Sans Bold",
+     "fontsize": 11,
+     "textcolor": [
+      0.922,
+      0.922,
+      0.91,
+      1.0
+     ],
+     "text": "TWIN PHASOR 76",
+     "textjustification": 0,
      "patching_rect": [
       700,
-      0,
-      1058,
-      163
+      400,
+      140,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      3,
-      3,
-      1058,
-      163
+      10,
+      4,
+      140,
+      13
      ],
-     "mode": 0,
-     "bgcolor": [
-      0.216,
-      0.314,
-      0.663,
-      1.0
-     ],
-     "border": 0,
-     "rounded": 4,
-     "background": 1,
-     "bgfillcolor": {
-      "type": "gradient",
-      "color1": [
-       0.216,
-       0.314,
-       0.663,
-       1.0
-      ],
-      "color2": [
-       0.239,
-       0.345,
-       0.698,
-       1.0
-      ],
-      "color": [
-       0.216,
-       0.314,
-       0.663,
-       1.0
-      ],
-      "angle": 0.0,
-      "proportion": 0.5,
-      "autogradient": 0
-     }
+     "background": 1
     }
    },
    {
     "box": {
      "id": "obj-8",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8.5,
+     "textcolor": [
+      0.557,
+      0.576,
+      0.608,
+      1.0
+     ],
+     "text": "ECHOLIVITY  \u00b7  DUAL OPTICAL PHASER",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      300,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      128,
+      5,
+      300,
+      13
+     ],
+     "background": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-9",
      "maxclass": "panel",
      "numinlets": 1,
      "numoutlets": 0,
      "patching_rect": [
       700,
       0,
-      112,
-      155
+      168,
+      141
      ],
      "presentation": 1,
      "presentation_rect": [
-      8,
-      7,
-      112,
-      155
+      6,
+      24,
+      168,
+      141
      ],
      "mode": 0,
      "bgcolor": [
-      0,
-      0,
-      0,
-      0
+      0.137,
+      0.145,
+      0.161,
+      1.0
      ],
-     "border": 1.5,
-     "rounded": 8,
+     "border": 1,
+     "rounded": 6,
      "background": 1,
      "bordercolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.18,
+      0.192,
+      0.212,
       1.0
      ],
      "bgfillcolor": {
       "type": "color",
       "color": [
-       0,
-       0,
-       0,
-       0
+       0.137,
+       0.145,
+       0.161,
+       1.0
       ]
      }
     }
    },
    {
     "box": {
-     "id": "obj-9",
+     "id": "obj-11",
+     "maxclass": "panel",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      700,
+      0,
+      3,
+      11
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      14,
+      31,
+      3,
+      11
+     ],
+     "mode": 0,
+     "bgcolor": [
+      0.416,
+      0.635,
+      0.863,
+      1.0
+     ],
+     "border": 0,
+     "rounded": 1,
+     "background": 1,
+     "bgfillcolor": {
+      "type": "color",
+      "color": [
+       0.416,
+       0.635,
+       0.863,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "box": {
+     "id": "obj-12",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
      "fontname": "Ableton Sans Bold",
-     "fontsize": 9.5,
+     "fontsize": 10,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "text": "SWEEP GEN 1",
-     "textjustification": 1,
+     "text": "PHASOR A",
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      104,
-      14
+      148,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      12,
-      9,
-      104,
-      14
-     ]
+      21,
+      29,
+      148,
+      13
+     ],
+     "background": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-14",
+     "maxclass": "panel",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      700,
+      0,
+      318,
+      141
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      180,
+      24,
+      318,
+      141
+     ],
+     "mode": 0,
+     "bgcolor": [
+      0.137,
+      0.145,
+      0.161,
+      1.0
+     ],
+     "border": 1,
+     "rounded": 6,
+     "background": 1,
+     "bordercolor": [
+      0.18,
+      0.192,
+      0.212,
+      1.0
+     ],
+     "bgfillcolor": {
+      "type": "color",
+      "color": [
+       0.137,
+       0.145,
+       0.161,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "box": {
+     "id": "obj-15",
+     "maxclass": "panel",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      700,
+      0,
+      3,
+      11
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      188,
+      31,
+      3,
+      11
+     ],
+     "mode": 0,
+     "bgcolor": [
+      0.78,
+      0.796,
+      0.82,
+      1.0
+     ],
+     "border": 0,
+     "rounded": 1,
+     "background": 1,
+     "bgfillcolor": {
+      "type": "color",
+      "color": [
+       0.78,
+       0.796,
+       0.82,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "box": {
+     "id": "obj-17",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Bold",
+     "fontsize": 10,
+     "textcolor": [
+      0.922,
+      0.922,
+      0.91,
+      1.0
+     ],
+     "text": "MODULATION",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      298,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      195,
+      29,
+      298,
+      13
+     ],
+     "background": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-18",
+     "maxclass": "panel",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      700,
+      0,
+      250,
+      141
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      504,
+      24,
+      250,
+      141
+     ],
+     "mode": 0,
+     "bgcolor": [
+      0.137,
+      0.145,
+      0.161,
+      1.0
+     ],
+     "border": 1,
+     "rounded": 6,
+     "background": 1,
+     "bordercolor": [
+      0.18,
+      0.192,
+      0.212,
+      1.0
+     ],
+     "bgfillcolor": {
+      "type": "color",
+      "color": [
+       0.137,
+       0.145,
+       0.161,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "box": {
+     "id": "obj-19",
+     "maxclass": "panel",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      700,
+      0,
+      3,
+      11
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      512,
+      31,
+      3,
+      11
+     ],
+     "mode": 0,
+     "bgcolor": [
+      0.878,
+      0.635,
+      0.314,
+      1.0
+     ],
+     "border": 0,
+     "rounded": 1,
+     "background": 1,
+     "bgfillcolor": {
+      "type": "color",
+      "color": [
+       0.878,
+       0.635,
+       0.314,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "box": {
+     "id": "obj-21",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Bold",
+     "fontsize": 10,
+     "textcolor": [
+      0.922,
+      0.922,
+      0.91,
+      1.0
+     ],
+     "text": "PHASOR B",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      230,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      519,
+      29,
+      230,
+      13
+     ],
+     "background": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-22",
+     "maxclass": "panel",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      700,
+      0,
+      176,
+      141
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      760,
+      24,
+      176,
+      141
+     ],
+     "mode": 0,
+     "bgcolor": [
+      0.137,
+      0.145,
+      0.161,
+      1.0
+     ],
+     "border": 1,
+     "rounded": 6,
+     "background": 1,
+     "bordercolor": [
+      0.18,
+      0.192,
+      0.212,
+      1.0
+     ],
+     "bgfillcolor": {
+      "type": "color",
+      "color": [
+       0.137,
+       0.145,
+       0.161,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "box": {
+     "id": "obj-24",
+     "maxclass": "panel",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      700,
+      0,
+      3,
+      11
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      768,
+      31,
+      3,
+      11
+     ],
+     "mode": 0,
+     "bgcolor": [
+      0.78,
+      0.796,
+      0.82,
+      1.0
+     ],
+     "border": 0,
+     "rounded": 1,
+     "background": 1,
+     "bgfillcolor": {
+      "type": "color",
+      "color": [
+       0.78,
+       0.796,
+       0.82,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "box": {
+     "id": "obj-25",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Bold",
+     "fontsize": 10,
+     "textcolor": [
+      0.922,
+      0.922,
+      0.91,
+      1.0
+     ],
+     "text": "OUTPUT",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      156,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      775,
+      29,
+      156,
+      13
+     ],
+     "background": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-26",
+     "maxclass": "panel",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      700,
+      0,
+      196,
+      141
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      942,
+      24,
+      196,
+      141
+     ],
+     "mode": 0,
+     "bgcolor": [
+      0.137,
+      0.145,
+      0.161,
+      1.0
+     ],
+     "border": 1,
+     "rounded": 6,
+     "background": 1,
+     "bordercolor": [
+      0.18,
+      0.192,
+      0.212,
+      1.0
+     ],
+     "bgfillcolor": {
+      "type": "color",
+      "color": [
+       0.137,
+       0.145,
+       0.161,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "box": {
+     "id": "obj-27",
+     "maxclass": "panel",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      700,
+      0,
+      3,
+      11
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      950,
+      31,
+      3,
+      11
+     ],
+     "mode": 0,
+     "bgcolor": [
+      0.78,
+      0.796,
+      0.82,
+      1.0
+     ],
+     "border": 0,
+     "rounded": 1,
+     "background": 1,
+     "bgfillcolor": {
+      "type": "color",
+      "color": [
+       0.78,
+       0.796,
+       0.82,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "box": {
+     "id": "obj-29",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Bold",
+     "fontsize": 10,
+     "textcolor": [
+      0.922,
+      0.922,
+      0.91,
+      1.0
+     ],
+     "text": "CHARACTER",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      176,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      957,
+      29,
+      176,
+      13
+     ],
+     "background": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-31",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Bold",
+     "fontsize": 8,
+     "textcolor": [
+      0.557,
+      0.576,
+      0.608,
+      1.0
+     ],
+     "text": "GEN 1",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      60,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      240,
+      41,
+      60,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -606,14 +1160,14 @@
       700,
       100,
       46,
-      50
+      48
      ],
      "presentation": 1,
      "presentation_rect": [
-      12,
-      22,
+      186,
+      42,
       46,
-      50
+      48
      ],
      "appearance": 0,
      "showname": 1,
@@ -636,48 +1190,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Sweep generator 1 speed, 0.1-18 Hz. Drives Phasor A, and Phasor B when B Sweep = G1.",
+     "annotation_name": "Gen1 Rate"
     }
    },
    {
     "box": {
-     "id": "obj-11",
+     "id": "obj-32",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -692,37 +1248,6 @@
      "text": "prepend g1_rate",
      "outlettype": [
       ""
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-12",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.0,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "SHAPE",
-     "textjustification": 1,
-     "patching_rect": [
-      700,
-      400,
-      52,
-      12
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      62,
-      24,
-      52,
-      12
      ]
     }
    },
@@ -744,14 +1269,14 @@
      "patching_rect": [
       700,
       200,
-      52,
+      62,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
+      238,
+      55,
       62,
-      36,
-      52,
       15
      ],
      "saved_attribute_attributes": {
@@ -772,72 +1297,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.604,
-      0.62,
-      0.639,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.604,
-      0.62,
-      0.639,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "Gen 1 waveform.",
+     "annotation_name": "Gen1 Shape"
     }
    },
    {
     "box": {
-     "id": "obj-14",
+     "id": "obj-33",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -852,37 +1379,6 @@
      "text": "prepend g1_shape",
      "outlettype": [
       ""
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-15",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.0,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "RATE",
-     "textjustification": 1,
-     "patching_rect": [
-      700,
-      400,
-      52,
-      12
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      62,
-      56,
-      52,
-      12
      ]
     }
    },
@@ -904,14 +1400,14 @@
      "patching_rect": [
       700,
       200,
-      52,
+      62,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
+      238,
+      74,
       62,
-      68,
-      52,
       15
      ],
      "saved_attribute_attributes": {
@@ -932,72 +1428,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.659,
-      0.792,
-      0.91,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.659,
-      0.792,
-      0.91,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "MAN: Rate knob sets the speed. PED: the Pedal sets the speed (0.1-18 Hz).",
+     "annotation_name": "Gen1 Rate Src"
     }
    },
    {
     "box": {
-     "id": "obj-17",
+     "id": "obj-34",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -1017,83 +1515,6 @@
    },
    {
     "box": {
-     "id": "obj-18",
-     "maxclass": "panel",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "patching_rect": [
-      700,
-      0,
-      150,
-      155
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      124,
-      7,
-      150,
-      155
-     ],
-     "mode": 0,
-     "bgcolor": [
-      0,
-      0,
-      0,
-      0
-     ],
-     "border": 1.5,
-     "rounded": 8,
-     "background": 1,
-     "bordercolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "bgfillcolor": {
-      "type": "color",
-      "color": [
-       0,
-       0,
-       0,
-       0
-      ]
-     }
-    }
-   },
-   {
-    "box": {
-     "id": "obj-19",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.5,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "PHASOR A",
-     "textjustification": 1,
-     "patching_rect": [
-      700,
-      400,
-      142,
-      14
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      128,
-      9,
-      142,
-      14
-     ]
-    }
-   },
-   {
-    "box": {
      "id": "obj-20",
      "maxclass": "live.dial",
      "varname": "A Depth",
@@ -1107,15 +1528,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      50
+      74,
+      70
      ],
      "presentation": 1,
      "presentation_rect": [
-      128,
-      22,
-      46,
-      50
+      14,
+      44,
+      74,
+      70
      ],
      "appearance": 0,
      "showname": 1,
@@ -1138,48 +1559,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.416,
+      0.635,
+      0.863,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.416,
+      0.635,
+      0.863,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "How far the sweep moves Phasor A's notches.",
+     "annotation_name": "A Depth"
     }
    },
    {
     "box": {
-     "id": "obj-21",
+     "id": "obj-35",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -1199,7 +1622,7 @@
    },
    {
     "box": {
-     "id": "obj-22",
+     "id": "obj-36",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -1232,15 +1655,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      50
+      74,
+      70
      ],
      "presentation": 1,
      "presentation_rect": [
-      176,
-      22,
-      46,
-      50
+      92,
+      44,
+      74,
+      70
      ],
      "appearance": 0,
      "showname": 1,
@@ -1263,48 +1686,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.416,
+      0.635,
+      0.863,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.416,
+      0.635,
+      0.863,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Resonance between the notches. Adds level at high settings.",
+     "annotation_name": "A Feedback"
     }
    },
    {
     "box": {
-     "id": "obj-24",
+     "id": "obj-37",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -1324,7 +1749,7 @@
    },
    {
     "box": {
-     "id": "obj-25",
+     "id": "obj-38",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -1344,73 +1769,34 @@
    },
    {
     "box": {
-     "id": "obj-26",
-     "maxclass": "panel",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "patching_rect": [
-      700,
-      0,
-      142,
-      30
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      128,
-      80,
-      142,
-      30
-     ],
-     "mode": 0,
-     "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
-      1.0
-     ],
-     "border": 0,
-     "rounded": 3,
-     "background": 1,
-     "bgfillcolor": {
-      "type": "color",
-      "color": [
-       0.184,
-       0.192,
-       0.204,
-       1.0
-      ]
-     }
-    }
-   },
-   {
-    "box": {
-     "id": "obj-27",
+     "id": "obj-39",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8.5,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "text": "SWEEP",
-     "textjustification": 1,
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      138,
-      12
+      80,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      130,
-      81,
-      138,
-      12
-     ]
+      16,
+      118,
+      80,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -1431,15 +1817,15 @@
      "patching_rect": [
       700,
       200,
-      134,
-      14
+      152,
+      17
      ],
      "presentation": 1,
      "presentation_rect": [
+      14,
       132,
-      93,
-      134,
-      14
+      152,
+      17
      ],
      "saved_attribute_attributes": {
       "valueof": {
@@ -1460,72 +1846,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.659,
-      0.792,
-      0.91,
+      0.416,
+      0.635,
+      0.863,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.659,
-      0.792,
-      0.91,
+      0.416,
+      0.635,
+      0.863,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.416,
+      0.635,
+      0.863,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "What moves Phasor A: Gen 1, the Pedal, or the input envelope.",
+     "annotation_name": "A Sweep"
     }
    },
    {
     "box": {
-     "id": "obj-29",
+     "id": "obj-40",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -1555,22 +1943,22 @@
       ""
      ],
      "parameter_enable": 1,
-     "text": "PHASOR A",
-     "texton": "PHASOR A",
+     "text": "OFF",
+     "texton": "ON",
      "fontname": "Ableton Sans Bold",
      "fontsize": 8.5,
      "patching_rect": [
       700,
       1100,
-      70,
-      20
+      44,
+      15
      ],
      "presentation": 1,
      "presentation_rect": [
-      128,
-      120,
-      70,
-      20
+      122,
+      28,
+      44,
+      15
      ],
      "saved_attribute_attributes": {
       "valueof": {
@@ -1578,8 +1966,8 @@
        "parameter_shortname": "A On",
        "parameter_type": 2,
        "parameter_enum": [
-        "PHASOR A",
-        "PHASOR A"
+        "OFF",
+        "ON"
        ],
        "parameter_initial_enable": 1,
        "parameter_initial": [
@@ -1590,65 +1978,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.416,
+      0.635,
+      0.863,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.416,
+      0.635,
+      0.863,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Phasor A footswitch. Optical fade in VINTAGE (FADE).",
+     "annotation_name": "A On"
     }
    },
    {
     "box": {
-     "id": "obj-31",
+     "id": "obj-41",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -1668,45 +2058,39 @@
    },
    {
     "box": {
-     "id": "obj-32",
+     "id": "obj-43",
      "maxclass": "panel",
      "numinlets": 1,
      "numoutlets": 0,
      "patching_rect": [
       700,
       0,
-      12,
-      12
+      9,
+      9
      ],
      "presentation": 1,
      "presentation_rect": [
-      206,
-      124,
-      12,
-      12
+      109,
+      31,
+      9,
+      9
      ],
      "mode": 0,
      "bgcolor": [
       0.227,
-      0.047,
-      0.047,
+      0.239,
+      0.263,
       1.0
      ],
-     "border": 1,
-     "rounded": 12,
+     "border": 0,
+     "rounded": 9,
      "background": 1,
-     "bordercolor": [
-      0.184,
-      0.192,
-      0.204,
-      1.0
-     ],
      "bgfillcolor": {
       "type": "color",
       "color": [
        0.227,
-       0.047,
-       0.047,
+       0.239,
+       0.263,
        1.0
       ]
      }
@@ -1714,7 +2098,7 @@
    },
    {
     "box": {
-     "id": "obj-33",
+     "id": "obj-44",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -1734,20 +2118,21 @@
    },
    {
     "box": {
-     "id": "obj-34",
+     "id": "obj-46",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
      "numinlets": 1,
-     "numoutlets": 2,
+     "numoutlets": 3,
      "patching_rect": [
       890,
       682,
-      40,
+      50,
       22
      ],
-     "text": "t f f",
+     "text": "t f f f",
      "outlettype": [
+      "float",
       "float",
       "float"
      ]
@@ -1755,59 +2140,19 @@
    },
    {
     "box": {
-     "id": "obj-35",
-     "maxclass": "newobj",
-     "fontname": "Arial Bold",
-     "fontsize": 10.0,
-     "numinlets": 1,
-     "numoutlets": 1,
-     "patching_rect": [
-      940,
-      682,
-      110,
-      22
-     ],
-     "text": "expr 0.23+0.77*$f1",
-     "outlettype": [
-      ""
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-36",
-     "maxclass": "newobj",
-     "fontname": "Arial Bold",
-     "fontsize": 10.0,
-     "numinlets": 1,
-     "numoutlets": 1,
-     "patching_rect": [
-      1060,
-      682,
-      110,
-      22
-     ],
-     "text": "expr 0.05+0.13*$f1",
-     "outlettype": [
-      ""
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-37",
+     "id": "obj-47",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
      "numinlets": 4,
      "numoutlets": 1,
      "patching_rect": [
-      1180,
+      1300,
       682,
       100,
       22
      ],
-     "text": "pack 0. 0. 0.04 1.",
+     "text": "pack 0. 0. 0. 1.",
      "outlettype": [
       ""
      ]
@@ -1815,14 +2160,74 @@
    },
    {
     "box": {
-     "id": "obj-38",
+     "id": "obj-48",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
      "numinlets": 1,
      "numoutlets": 1,
      "patching_rect": [
-      1290,
+      950,
+      682,
+      110,
+      22
+     ],
+     "text": "expr 0.227+0.189*$f1",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-50",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      1065,
+      682,
+      110,
+      22
+     ],
+     "text": "expr 0.239+0.396*$f1",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-51",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      1180,
+      682,
+      110,
+      22
+     ],
+     "text": "expr 0.263+0.6*$f1",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-52",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      1410,
       682,
       110,
       22
@@ -1830,114 +2235,6 @@
      "text": "prepend bgfillcolor",
      "outlettype": [
       ""
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-39",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "ACTIVE",
-     "textjustification": 0,
-     "patching_rect": [
-      700,
-      400,
-      50,
-      12
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      222,
-      124,
-      50,
-      12
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-40",
-     "maxclass": "panel",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "patching_rect": [
-      700,
-      0,
-      214,
-      155
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      278,
-      7,
-      214,
-      155
-     ],
-     "mode": 0,
-     "bgcolor": [
-      0,
-      0,
-      0,
-      0
-     ],
-     "border": 1.5,
-     "rounded": 8,
-     "background": 1,
-     "bordercolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "bgfillcolor": {
-      "type": "color",
-      "color": [
-       0,
-       0,
-       0,
-       0
-      ]
-     }
-    }
-   },
-   {
-    "box": {
-     "id": "obj-41",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.5,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "PHASOR B",
-     "textjustification": 1,
-     "patching_rect": [
-      700,
-      400,
-      206,
-      14
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      282,
-      9,
-      206,
-      14
      ]
     }
    },
@@ -1956,15 +2253,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      50
+      68,
+      70
      ],
      "presentation": 1,
      "presentation_rect": [
-      282,
-      22,
-      46,
-      50
+      512,
+      44,
+      68,
+      70
      ],
      "appearance": 0,
      "showname": 1,
@@ -1987,48 +2284,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "How far the sweep moves Phasor B's notches.",
+     "annotation_name": "B Depth"
     }
    },
    {
     "box": {
-     "id": "obj-43",
+     "id": "obj-54",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -2048,7 +2347,7 @@
    },
    {
     "box": {
-     "id": "obj-44",
+     "id": "obj-55",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -2081,15 +2380,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      50
+      68,
+      70
      ],
      "presentation": 1,
      "presentation_rect": [
-      330,
-      22,
-      46,
-      50
+      580,
+      44,
+      68,
+      70
      ],
      "appearance": 0,
      "showname": 1,
@@ -2112,48 +2411,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Resonance between the notches. Two phasors in series add up to about +25 dB at full feedback.",
+     "annotation_name": "B Feedback"
     }
    },
    {
     "box": {
-     "id": "obj-46",
+     "id": "obj-56",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -2173,7 +2474,7 @@
    },
    {
     "box": {
-     "id": "obj-47",
+     "id": "obj-58",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -2193,33 +2494,34 @@
    },
    {
     "box": {
-     "id": "obj-48",
+     "id": "obj-60",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8.5,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "text": "SWEEP SYNC",
-     "textjustification": 1,
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      104,
-      12
+      92,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      382,
-      22,
-      104,
-      12
-     ]
+      654,
+      43,
+      92,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -2240,14 +2542,14 @@
      "patching_rect": [
       700,
       200,
-      104,
+      94,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      382,
-      34,
-      104,
+      654,
+      56,
+      94,
       15
      ],
      "saved_attribute_attributes": {
@@ -2269,72 +2571,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.906,
-      0.18,
-      0.141,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.906,
-      0.18,
-      0.141,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "B's sweep relative to A on Gen 1: NORM in phase, REV opposite, QUAD 90 degrees ahead.",
+     "annotation_name": "B Sync"
     }
    },
    {
     "box": {
-     "id": "obj-50",
+     "id": "obj-61",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -2354,79 +2658,34 @@
    },
    {
     "box": {
-     "id": "obj-51",
-     "maxclass": "panel",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "patching_rect": [
-      700,
-      0,
-      108,
-      34
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      380,
-      54,
-      108,
-      34
-     ],
-     "mode": 0,
-     "bgcolor": [
-      0,
-      0,
-      0,
-      0
-     ],
-     "border": 1.5,
-     "rounded": 6,
-     "background": 1,
-     "bordercolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "bgfillcolor": {
-      "type": "color",
-      "color": [
-       0,
-       0,
-       0,
-       0
-      ]
-     }
-    }
-   },
-   {
-    "box": {
-     "id": "obj-52",
+     "id": "obj-62",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8.5,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
-     "text": "PHASOR B INPUT",
-     "textjustification": 1,
+     "text": "INPUT",
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      104,
-      12
+      92,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      382,
-      55,
-      104,
-      12
-     ]
+      654,
+      78,
+      92,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -2447,14 +2706,14 @@
      "patching_rect": [
       700,
       200,
-      100,
+      94,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      384,
-      69,
-      100,
+      654,
+      91,
+      94,
       15
      ],
      "saved_attribute_attributes": {
@@ -2476,72 +2735,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.847,
-      0.827,
-      0.753,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.847,
-      0.827,
-      0.753,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "IN A: parallel with A. OUT A: series after A (double depth). IN B: right input channel.",
+     "annotation_name": "B Input"
     }
    },
    {
     "box": {
-     "id": "obj-54",
+     "id": "obj-63",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -2561,73 +2822,34 @@
    },
    {
     "box": {
-     "id": "obj-55",
-     "maxclass": "panel",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "patching_rect": [
-      700,
-      0,
-      96,
-      30
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      282,
-      80,
-      96,
-      30
-     ],
-     "mode": 0,
-     "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
-      1.0
-     ],
-     "border": 0,
-     "rounded": 3,
-     "background": 1,
-     "bgfillcolor": {
-      "type": "color",
-      "color": [
-       0.184,
-       0.192,
-       0.204,
-       1.0
-      ]
-     }
-    }
-   },
-   {
-    "box": {
-     "id": "obj-56",
+     "id": "obj-64",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8.5,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "text": "SWEEP",
-     "textjustification": 1,
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      92,
-      12
+      80,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      284,
-      81,
-      92,
-      12
-     ]
+      514,
+      118,
+      80,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -2648,15 +2870,15 @@
      "patching_rect": [
       700,
       200,
-      88,
-      14
+      236,
+      17
      ],
      "presentation": 1,
      "presentation_rect": [
-      286,
-      93,
-      88,
-      14
+      512,
+      132,
+      236,
+      17
      ],
      "saved_attribute_attributes": {
       "valueof": {
@@ -2678,72 +2900,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.847,
-      0.827,
-      0.753,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.847,
-      0.827,
-      0.753,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "What moves Phasor B: Gen 1, Gen 2, the Pedal, or the input envelope.",
+     "annotation_name": "B Sweep"
     }
    },
    {
     "box": {
-     "id": "obj-58",
+     "id": "obj-65",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -2773,22 +2997,22 @@
       ""
      ],
      "parameter_enable": 1,
-     "text": "PHASOR B",
-     "texton": "PHASOR B",
+     "text": "OFF",
+     "texton": "ON",
      "fontname": "Ableton Sans Bold",
      "fontsize": 8.5,
      "patching_rect": [
       700,
       1100,
-      70,
-      20
+      46,
+      15
      ],
      "presentation": 1,
      "presentation_rect": [
-      282,
-      120,
-      70,
-      20
+      702,
+      28,
+      46,
+      15
      ],
      "saved_attribute_attributes": {
       "valueof": {
@@ -2796,8 +3020,8 @@
        "parameter_shortname": "B On",
        "parameter_type": 2,
        "parameter_enum": [
-        "PHASOR B",
-        "PHASOR B"
+        "OFF",
+        "ON"
        ],
        "parameter_initial_enable": 1,
        "parameter_initial": [
@@ -2808,65 +3032,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.878,
+      0.635,
+      0.314,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.078,
+      0.082,
+      0.09,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Phasor B footswitch.",
+     "annotation_name": "B On"
     }
    },
    {
     "box": {
-     "id": "obj-60",
+     "id": "obj-66",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -2886,45 +3112,39 @@
    },
    {
     "box": {
-     "id": "obj-61",
+     "id": "obj-67",
      "maxclass": "panel",
      "numinlets": 1,
      "numoutlets": 0,
      "patching_rect": [
       700,
       0,
-      12,
-      12
+      9,
+      9
      ],
      "presentation": 1,
      "presentation_rect": [
-      360,
-      124,
-      12,
-      12
+      689,
+      31,
+      9,
+      9
      ],
      "mode": 0,
      "bgcolor": [
       0.227,
-      0.047,
-      0.047,
+      0.239,
+      0.263,
       1.0
      ],
-     "border": 1,
-     "rounded": 12,
+     "border": 0,
+     "rounded": 9,
      "background": 1,
-     "bordercolor": [
-      0.184,
-      0.192,
-      0.204,
-      1.0
-     ],
      "bgfillcolor": {
       "type": "color",
       "color": [
        0.227,
-       0.047,
-       0.047,
+       0.239,
+       0.263,
        1.0
       ]
      }
@@ -2932,7 +3152,7 @@
    },
    {
     "box": {
-     "id": "obj-62",
+     "id": "obj-68",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -2952,20 +3172,21 @@
    },
    {
     "box": {
-     "id": "obj-63",
+     "id": "obj-69",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
      "numinlets": 1,
-     "numoutlets": 2,
+     "numoutlets": 3,
      "patching_rect": [
       890,
       864,
-      40,
+      50,
       22
      ],
-     "text": "t f f",
+     "text": "t f f f",
      "outlettype": [
+      "float",
       "float",
       "float"
      ]
@@ -2973,59 +3194,19 @@
    },
    {
     "box": {
-     "id": "obj-64",
-     "maxclass": "newobj",
-     "fontname": "Arial Bold",
-     "fontsize": 10.0,
-     "numinlets": 1,
-     "numoutlets": 1,
-     "patching_rect": [
-      940,
-      864,
-      110,
-      22
-     ],
-     "text": "expr 0.23+0.77*$f1",
-     "outlettype": [
-      ""
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-65",
-     "maxclass": "newobj",
-     "fontname": "Arial Bold",
-     "fontsize": 10.0,
-     "numinlets": 1,
-     "numoutlets": 1,
-     "patching_rect": [
-      1060,
-      864,
-      110,
-      22
-     ],
-     "text": "expr 0.05+0.13*$f1",
-     "outlettype": [
-      ""
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-66",
+     "id": "obj-70",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
      "numinlets": 4,
      "numoutlets": 1,
      "patching_rect": [
-      1180,
+      1300,
       864,
       100,
       22
      ],
-     "text": "pack 0. 0. 0.04 1.",
+     "text": "pack 0. 0. 0. 1.",
      "outlettype": [
       ""
      ]
@@ -3033,14 +3214,74 @@
    },
    {
     "box": {
-     "id": "obj-67",
+     "id": "obj-72",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
      "numinlets": 1,
      "numoutlets": 1,
      "patching_rect": [
-      1290,
+      950,
+      864,
+      110,
+      22
+     ],
+     "text": "expr 0.227+0.651*$f1",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-73",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      1065,
+      864,
+      110,
+      22
+     ],
+     "text": "expr 0.239+0.396*$f1",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-75",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      1180,
+      864,
+      110,
+      22
+     ],
+     "text": "expr 0.263+0.051*$f1",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-76",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      1410,
       864,
       110,
       22
@@ -3053,38 +3294,7 @@
    },
    {
     "box": {
-     "id": "obj-68",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "ACTIVE",
-     "textjustification": 0,
-     "patching_rect": [
-      700,
-      400,
-      50,
-      12
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      376,
-      124,
-      50,
-      12
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-69",
+     "id": "obj-77",
      "maxclass": "panel",
      "numinlets": 1,
      "numoutlets": 0,
@@ -3092,71 +3302,66 @@
       700,
       0,
       112,
-      155
+      1
      ],
      "presentation": 1,
      "presentation_rect": [
-      496,
-      7,
+      188,
+      98,
       112,
-      155
+      1
      ],
      "mode": 0,
      "bgcolor": [
-      0,
-      0,
-      0,
-      0
-     ],
-     "border": 1.5,
-     "rounded": 8,
-     "background": 1,
-     "bordercolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.18,
+      0.192,
+      0.212,
       1.0
      ],
+     "border": 0,
+     "rounded": 0,
+     "background": 1,
      "bgfillcolor": {
       "type": "color",
       "color": [
-       0,
-       0,
-       0,
-       0
+       0.18,
+       0.192,
+       0.212,
+       1.0
       ]
      }
     }
    },
    {
     "box": {
-     "id": "obj-70",
+     "id": "obj-79",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
      "fontname": "Ableton Sans Bold",
-     "fontsize": 9.5,
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
-     "text": "SWEEP GEN 2",
-     "textjustification": 1,
+     "text": "GEN 2",
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      104,
-      14
+      60,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      500,
-      9,
+      240,
       104,
-      14
-     ]
+      60,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -3175,14 +3380,14 @@
       700,
       100,
       46,
-      50
+      48
      ],
      "presentation": 1,
      "presentation_rect": [
-      500,
-      22,
+      186,
+      104,
       46,
-      50
+      48
      ],
      "appearance": 0,
      "showname": 1,
@@ -3205,48 +3410,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Sweep generator 2 speed, 0.1-18 Hz. Used by Phasor B when B Sweep = G2.",
+     "annotation_name": "Gen2 Rate"
     }
    },
    {
     "box": {
-     "id": "obj-72",
+     "id": "obj-80",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -3261,37 +3468,6 @@
      "text": "prepend g2_rate",
      "outlettype": [
       ""
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-73",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.0,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "SHAPE",
-     "textjustification": 1,
-     "patching_rect": [
-      700,
-      400,
-      52,
-      12
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      550,
-      24,
-      52,
-      12
      ]
     }
    },
@@ -3313,14 +3489,14 @@
      "patching_rect": [
       700,
       200,
-      52,
+      62,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      550,
-      36,
-      52,
+      238,
+      118,
+      62,
       15
      ],
      "saved_attribute_attributes": {
@@ -3341,72 +3517,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.604,
-      0.62,
-      0.639,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.604,
-      0.62,
-      0.639,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "Gen 2 waveform.",
+     "annotation_name": "Gen2 Shape"
     }
    },
    {
     "box": {
-     "id": "obj-75",
+     "id": "obj-82",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -3426,28 +3604,28 @@
    },
    {
     "box": {
-     "id": "obj-76",
+     "id": "obj-84",
      "maxclass": "panel",
      "numinlets": 1,
      "numoutlets": 0,
      "patching_rect": [
       700,
       0,
-      100,
-      1
+      1,
+      112
      ],
      "presentation": 1,
      "presentation_rect": [
-      502,
-      76,
-      100,
-      1
+      306,
+      44,
+      1,
+      112
      ],
      "mode": 0,
      "bgcolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.18,
+      0.192,
+      0.212,
       1.0
      ],
      "border": 0,
@@ -3456,9 +3634,9 @@
      "bgfillcolor": {
       "type": "color",
       "color": [
-       0.91,
-       0.914,
-       0.918,
+       0.18,
+       0.192,
+       0.212,
        1.0
       ]
      }
@@ -3466,33 +3644,34 @@
    },
    {
     "box": {
-     "id": "obj-77",
+     "id": "obj-86",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.0,
+     "fontsize": 8.5,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
-     "text": "ENVELOPE (ENV)",
-     "textjustification": 1,
+     "text": "ENVELOPE",
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      104,
-      12
+      120,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      500,
-      79,
-      104,
-      12
-     ]
+      366,
+      43,
+      120,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -3510,15 +3689,15 @@
      "patching_rect": [
       700,
       100,
-      36,
-      44
+      44,
+      48
      ],
      "presentation": 1,
      "presentation_rect": [
-      498,
-      92,
-      36,
-      44
+      362,
+      55,
+      44,
+      48
      ],
      "appearance": 0,
      "showname": 1,
@@ -3541,48 +3720,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Envelope sensitivity. 100 % reaches full sweep at -12 dBFS peaks.",
+     "annotation_name": "Env Amount"
     }
    },
    {
     "box": {
-     "id": "obj-79",
+     "id": "obj-87",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -3602,7 +3783,7 @@
    },
    {
     "box": {
-     "id": "obj-80",
+     "id": "obj-88",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -3635,15 +3816,15 @@
      "patching_rect": [
       700,
       100,
-      36,
-      44
+      44,
+      48
      ],
      "presentation": 1,
      "presentation_rect": [
-      534,
-      92,
-      36,
-      44
+      406,
+      55,
+      44,
+      48
      ],
      "appearance": 0,
      "showname": 1,
@@ -3666,48 +3847,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Envelope rise time.",
+     "annotation_name": "Env Attack"
     }
    },
    {
     "box": {
-     "id": "obj-82",
+     "id": "obj-90",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -3740,15 +3923,15 @@
      "patching_rect": [
       700,
       100,
-      36,
-      44
+      44,
+      48
      ],
      "presentation": 1,
      "presentation_rect": [
-      570,
-      92,
-      36,
-      44
+      450,
+      55,
+      44,
+      48
      ],
      "appearance": 0,
      "showname": 1,
@@ -3771,48 +3954,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Envelope fall time.",
+     "annotation_name": "Env Release"
     }
    },
    {
     "box": {
-     "id": "obj-84",
+     "id": "obj-91",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -3848,15 +4033,15 @@
      "patching_rect": [
       700,
       200,
-      100,
-      14
+      128,
+      15
      ],
      "presentation": 1,
      "presentation_rect": [
-      502,
-      140,
-      100,
-      14
+      364,
+      110,
+      128,
+      15
      ],
      "saved_attribute_attributes": {
       "valueof": {
@@ -3876,72 +4061,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "UP: louder opens the sweep. DOWN: louder closes it.",
+     "annotation_name": "Env Polarity"
     }
    },
    {
     "box": {
-     "id": "obj-86",
+     "id": "obj-92",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -3961,79 +4148,106 @@
    },
    {
     "box": {
-     "id": "obj-87",
+     "id": "obj-93",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
+     "textcolor": [
+      0.557,
+      0.576,
+      0.608,
+      1.0
+     ],
+     "text": "Active when a Sweep is ENV",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      130,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      364,
+      130,
+      130,
+      13
+     ],
+     "background": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-94",
      "maxclass": "panel",
      "numinlets": 1,
      "numoutlets": 0,
      "patching_rect": [
       700,
       0,
-      62,
-      155
+      1,
+      112
      ],
      "presentation": 1,
      "presentation_rect": [
-      612,
-      7,
-      62,
-      155
+      356,
+      44,
+      1,
+      112
      ],
      "mode": 0,
      "bgcolor": [
-      0,
-      0,
-      0,
-      0
-     ],
-     "border": 1.5,
-     "rounded": 8,
-     "background": 1,
-     "bordercolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.18,
+      0.192,
+      0.212,
       1.0
      ],
+     "border": 0,
+     "rounded": 0,
+     "background": 1,
      "bgfillcolor": {
       "type": "color",
       "color": [
-       0,
-       0,
-       0,
-       0
+       0.18,
+       0.192,
+       0.212,
+       1.0
       ]
      }
     }
    },
    {
     "box": {
-     "id": "obj-88",
+     "id": "obj-95",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
      "fontname": "Ableton Sans Bold",
-     "fontsize": 9.5,
+     "fontsize": 8.5,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "text": "PEDAL",
-     "textjustification": 1,
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      54,
-      14
+      40,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      616,
-      9,
-      54,
-      14
-     ]
+      314,
+      43,
+      40,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -4051,15 +4265,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      50
+      44,
+      48
      ],
      "presentation": 1,
      "presentation_rect": [
-      620,
-      22,
-      46,
-      50
+      310,
+      55,
+      44,
+      48
      ],
      "appearance": 0,
      "showname": 1,
@@ -4082,48 +4296,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Manual sweep position (or Gen 1 speed when Rate Src = PED). Map it to an expression pedal.",
+     "annotation_name": "Pedal"
     }
    },
    {
     "box": {
-     "id": "obj-90",
+     "id": "obj-97",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -4143,7 +4359,7 @@
    },
    {
     "box": {
-     "id": "obj-91",
+     "id": "obj-98",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -4163,141 +4379,98 @@
    },
    {
     "box": {
-     "id": "obj-92",
+     "id": "obj-100",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "text": "map to",
-     "textjustification": 1,
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      58,
-      12
+      44,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      614,
-      76,
-      58,
-      12
-     ]
+      312,
+      108,
+      44,
+      13
+     ],
+     "background": 1
     }
    },
    {
     "box": {
-     "id": "obj-93",
+     "id": "obj-102",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
-     "text": "expression",
-     "textjustification": 1,
+     "text": "expr.",
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      58,
-      12
+      44,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      614,
-      86,
-      58,
-      12
-     ]
+      312,
+      120,
+      44,
+      13
+     ],
+     "background": 1
     }
    },
    {
     "box": {
-     "id": "obj-94",
-     "maxclass": "panel",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "patching_rect": [
-      700,
-      0,
-      172,
-      155
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      678,
-      7,
-      172,
-      155
-     ],
-     "mode": 0,
-     "bgcolor": [
-      0,
-      0,
-      0,
-      0
-     ],
-     "border": 1.5,
-     "rounded": 8,
-     "background": 1,
-     "bordercolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "bgfillcolor": {
-      "type": "color",
-      "color": [
-       0,
-       0,
-       0,
-       0
-      ]
-     }
-    }
-   },
-   {
-    "box": {
-     "id": "obj-95",
+     "id": "obj-104",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.5,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
-     "text": "OUTPUT",
-     "textjustification": 1,
+     "text": "pedal",
+     "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      164,
-      14
+      44,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      682,
-      9,
-      164,
-      14
-     ]
+      312,
+      132,
+      44,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -4315,15 +4488,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      50
+      54,
+      56
      ],
      "presentation": 1,
      "presentation_rect": [
-      682,
-      22,
-      46,
-      50
+      766,
+      44,
+      54,
+      56
      ],
      "appearance": 0,
      "showname": 1,
@@ -4346,48 +4519,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Dry/phased blend. 50 % is the original's fixed blend.",
+     "annotation_name": "Mix"
     }
    },
    {
     "box": {
-     "id": "obj-97",
+     "id": "obj-106",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -4407,7 +4582,7 @@
    },
    {
     "box": {
-     "id": "obj-98",
+     "id": "obj-108",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -4440,15 +4615,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      50
+      54,
+      56
      ],
      "presentation": 1,
      "presentation_rect": [
-      740,
-      22,
-      46,
-      50
+      822,
+      44,
+      54,
+      56
      ],
      "appearance": 0,
      "showname": 1,
@@ -4471,48 +4646,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Level into the circuit. With CLIP on (VINTAGE) this sets how hard the op-amps are hit.",
+     "annotation_name": "Drive"
     }
    },
    {
     "box": {
-     "id": "obj-100",
+     "id": "obj-109",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -4545,15 +4722,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      50
+      54,
+      56
      ],
      "presentation": 1,
      "presentation_rect": [
-      798,
-      22,
-      46,
-      50
+      878,
+      44,
+      54,
+      56
      ],
      "appearance": 0,
      "showname": 1,
@@ -4576,48 +4753,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Output level.",
+     "annotation_name": "Output"
     }
    },
    {
     "box": {
-     "id": "obj-102",
+     "id": "obj-111",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -4654,15 +4833,15 @@
      "patching_rect": [
       700,
       1100,
-      54,
-      16
+      80,
+      15
      ],
      "presentation": 1,
      "presentation_rect": [
-      682,
-      78,
-      54,
-      16
+      766,
+      104,
+      80,
+      15
      ],
      "saved_attribute_attributes": {
       "valueof": {
@@ -4682,65 +4861,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Phased signal only, whatever the Mix setting.",
+     "annotation_name": "Full Wet"
     }
    },
    {
     "box": {
-     "id": "obj-104",
+     "id": "obj-112",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -4774,14 +4955,14 @@
      "patching_rect": [
       700,
       700,
-      104,
+      80,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      740,
-      78,
+      850,
       104,
+      80,
       15
      ],
      "saved_attribute_attributes": {
@@ -4804,48 +4985,50 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "tricolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Which phasor reaches which output channel.",
+     "annotation_name": "Out Mode"
     }
    },
    {
     "box": {
-     "id": "obj-106",
+     "id": "obj-114",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -4882,15 +5065,15 @@
      "patching_rect": [
       700,
       1100,
-      54,
-      16
+      80,
+      15
      ],
      "presentation": 1,
      "presentation_rect": [
-      682,
-      98,
-      54,
-      16
+      766,
+      124,
+      80,
+      15
      ],
      "saved_attribute_attributes": {
       "valueof": {
@@ -4910,65 +5093,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Phasor A input: left channel, or left and right summed.",
+     "annotation_name": "In A Sum"
     }
    },
    {
     "box": {
-     "id": "obj-108",
+     "id": "obj-115",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -4988,37 +5173,6 @@
    },
    {
     "box": {
-     "id": "obj-109",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "ROUTE",
-     "textjustification": 0,
-     "patching_rect": [
-      700,
-      400,
-      40,
-      12
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      740,
-      98,
-      40,
-      12
-     ]
-    }
-   },
-   {
-    "box": {
      "id": "obj-110",
      "maxclass": "live.menu",
      "varname": "Route",
@@ -5033,14 +5187,14 @@
      "patching_rect": [
       700,
       700,
-      70,
+      80,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      774,
-      98,
-      70,
+      850,
+      124,
+      80,
       15
      ],
      "saved_attribute_attributes": {
@@ -5062,48 +5216,50 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "tricolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Dry + Bus: dry stays on this track, phased signal goes to outputs 3/4 (pick them with Audio From on another track).",
+     "annotation_name": "Route"
     }
    },
    {
     "box": {
-     "id": "obj-111",
+     "id": "obj-116",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5123,33 +5279,34 @@
    },
    {
     "box": {
-     "id": "obj-112",
+     "id": "obj-117",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
-     "text": "SEND BUS",
+     "text": "BUS",
      "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      60,
-      12
+      40,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      682,
-      120,
-      60,
-      12
-     ]
+      768,
+      145,
+      40,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -5173,8 +5330,8 @@
      ],
      "presentation": 1,
      "presentation_rect": [
-      740,
-      118,
+      796,
+      144,
       50,
       15
      ],
@@ -5202,48 +5359,82 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "tricolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "Legacy bus number for the Twin Phasor Return device.",
+     "annotation_name": "Bus"
     }
    },
    {
     "box": {
-     "id": "obj-114",
+     "id": "obj-118",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
+     "textcolor": [
+      0.557,
+      0.576,
+      0.608,
+      1.0
+     ],
+     "text": "+ outputs 3/4",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      84,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      850,
+      145,
+      84,
+      13
+     ],
+     "background": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-119",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5263,7 +5454,7 @@
    },
    {
     "box": {
-     "id": "obj-115",
+     "id": "obj-120",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5284,7 +5475,7 @@
    },
    {
     "box": {
-     "id": "obj-116",
+     "id": "obj-121",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5304,7 +5495,7 @@
    },
    {
     "box": {
-     "id": "obj-117",
+     "id": "obj-122",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5324,7 +5515,7 @@
    },
    {
     "box": {
-     "id": "obj-118",
+     "id": "obj-123",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5344,7 +5535,7 @@
    },
    {
     "box": {
-     "id": "obj-119",
+     "id": "obj-125",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5359,145 +5550,6 @@
      "text": "prepend set",
      "outlettype": [
       ""
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-120",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "+ Out 3/4",
-     "textjustification": 0,
-     "patching_rect": [
-      700,
-      400,
-      54,
-      12
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      794,
-      120,
-      54,
-      12
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-121",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.0,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "Other track: Audio From > 3/4",
-     "textjustification": 0,
-     "patching_rect": [
-      700,
-      400,
-      164,
-      12
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      682,
-      138,
-      164,
-      12
-     ]
-    }
-   },
-   {
-    "box": {
-     "id": "obj-122",
-     "maxclass": "panel",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "patching_rect": [
-      700,
-      0,
-      202,
-      155
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      854,
-      7,
-      202,
-      155
-     ],
-     "mode": 0,
-     "bgcolor": [
-      0,
-      0,
-      0,
-      0
-     ],
-     "border": 1.5,
-     "rounded": 8,
-     "background": 1,
-     "bordercolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "bgfillcolor": {
-      "type": "color",
-      "color": [
-       0,
-       0,
-       0,
-       0
-      ]
-     }
-    }
-   },
-   {
-    "box": {
-     "id": "obj-123",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.5,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "CHARACTER",
-     "textjustification": 1,
-     "patching_rect": [
-      700,
-      400,
-      194,
-      14
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      858,
-      9,
-      194,
-      14
      ]
     }
    },
@@ -5519,15 +5571,15 @@
      "patching_rect": [
       700,
       200,
-      190,
-      16
+      96,
+      15
      ],
      "presentation": 1,
      "presentation_rect": [
-      860,
-      22,
-      190,
-      16
+      1036,
+      28,
+      96,
+      15
      ],
      "saved_attribute_attributes": {
       "valueof": {
@@ -5547,72 +5599,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "VINTAGE: the lit quirks below are active. MODERN: all quirks off, matched cells, clean sweep between Lo and Hi.",
+     "annotation_name": "Character"
     }
    },
    {
     "box": {
-     "id": "obj-125",
+     "id": "obj-127",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5649,14 +5703,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      860,
-      44,
-      36,
+      948,
+      46,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -5677,65 +5731,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Cells light fast, darken slowly. Active in VINTAGE.",
+     "annotation_name": "Photocell lag"
     }
    },
    {
     "box": {
-     "id": "obj-127",
+     "id": "obj-129",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5772,14 +5828,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      898,
-      44,
-      36,
+      985,
+      46,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -5800,65 +5856,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Unmatched cells and LEDs. Active in VINTAGE.",
+     "annotation_name": "Cell mismatch"
     }
    },
    {
     "box": {
-     "id": "obj-129",
+     "id": "obj-131",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -5895,14 +5953,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      936,
-      44,
-      36,
+      1022,
+      46,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -5923,65 +5981,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Sweep lingers high, dives at the bottom. Active in VINTAGE.",
+     "annotation_name": "LED sweep law"
     }
    },
    {
     "box": {
-     "id": "obj-131",
+     "id": "obj-133",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -6018,14 +6078,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      974,
-      44,
-      36,
+      1059,
+      46,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -6046,65 +6106,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Low-end floor around 46 Hz. Active in VINTAGE.",
+     "annotation_name": "220k range"
     }
    },
    {
     "box": {
-     "id": "obj-133",
+     "id": "obj-135",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -6141,14 +6203,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      1012,
-      44,
-      36,
+      1096,
+      46,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -6169,65 +6231,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Op-amp saturation in the feedback loop. Active in VINTAGE.",
+     "annotation_name": "Op-amp clip"
     }
    },
    {
     "box": {
-     "id": "obj-135",
+     "id": "obj-137",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -6264,14 +6328,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      860,
-      62,
-      36,
+      948,
+      65,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -6292,65 +6356,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Circuit noise floor. Active in VINTAGE.",
+     "annotation_name": "Hiss"
     }
    },
    {
     "box": {
-     "id": "obj-137",
+     "id": "obj-139",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -6387,14 +6453,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      898,
-      62,
-      36,
+      985,
+      65,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -6415,65 +6481,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Mains hum at the frequency below. Active in VINTAGE.",
+     "annotation_name": "Mains hum"
     }
    },
    {
     "box": {
-     "id": "obj-139",
+     "id": "obj-141",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -6510,14 +6578,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      936,
-      62,
-      36,
+      1022,
+      65,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -6538,65 +6606,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Soft switch-in, slow tail-out. Active in VINTAGE.",
+     "annotation_name": "Optical bypass"
     }
    },
    {
     "box": {
-     "id": "obj-141",
+     "id": "obj-143",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -6633,14 +6703,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      974,
-      62,
-      36,
+      1059,
+      65,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -6661,65 +6731,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Triangle-based 'sine' sweep. Active in VINTAGE.",
+     "annotation_name": "Shaped tri LFO"
     }
    },
    {
     "box": {
-     "id": "obj-143",
+     "id": "obj-145",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -6756,14 +6828,14 @@
      "patching_rect": [
       700,
       1100,
-      36,
+      35,
       15
      ],
      "presentation": 1,
      "presentation_rect": [
-      1012,
-      62,
-      36,
+      1096,
+      65,
+      35,
       15
      ],
      "saved_attribute_attributes": {
@@ -6784,65 +6856,67 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "rounded": 3.0,
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
-     ]
+     ],
+     "annotation": "Input and feedback bandwidth limits. Active in VINTAGE.",
+     "annotation_name": "Circuit bandwidth"
     }
    },
    {
     "box": {
-     "id": "obj-145",
+     "id": "obj-146",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -6862,16 +6936,16 @@
    },
    {
     "box": {
-     "id": "obj-146",
+     "id": "obj-148",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "text": "HUM Hz",
@@ -6880,15 +6954,16 @@
       700,
       400,
       40,
-      12
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      860,
-      84,
+      950,
+      89,
       40,
-      12
-     ]
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -6909,15 +6984,15 @@
      "patching_rect": [
       700,
       200,
-      50,
-      15
+      60,
+      14
      ],
      "presentation": 1,
      "presentation_rect": [
-      898,
-      82,
-      50,
-      15
+      992,
+      87,
+      60,
+      14
      ],
      "saved_attribute_attributes": {
       "valueof": {
@@ -6937,72 +7012,74 @@
       }
      },
      "bgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "bgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "textoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "activebgcolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.169,
+      0.18,
+      0.2,
       1.0
      ],
      "activebgoncolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "activetextcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "activetextoncolor": [
-      0.184,
-      0.192,
-      0.204,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "bordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.227,
+      0.243,
+      0.271,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.357,
+      0.38,
+      0.42,
       1.0
      ],
      "fontname": "Ableton Sans Bold",
-     "fontsize": 8.5
+     "fontsize": 8.5,
+     "annotation": "Mains frequency for HUM.",
+     "annotation_name": "Hum Freq"
     }
    },
    {
     "box": {
-     "id": "obj-148",
+     "id": "obj-149",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -7022,16 +7099,16 @@
    },
    {
     "box": {
-     "id": "obj-149",
+     "id": "obj-151",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
      "text": "MODERN RANGE",
@@ -7039,16 +7116,17 @@
      "patching_rect": [
       700,
       400,
-      96,
-      12
+      120,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      956,
-      84,
-      96,
-      12
-     ]
+      950,
+      107,
+      120,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -7066,15 +7144,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      48
+      44,
+      44
      ],
      "presentation": 1,
      "presentation_rect": [
-      954,
-      98,
-      46,
-      48
+      948,
+      117,
+      44,
+      44
      ],
      "appearance": 0,
      "showname": 1,
@@ -7097,48 +7175,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "MODERN mode: lowest corner frequency of the sweep.",
+     "annotation_name": "Modern Lo"
     }
    },
    {
     "box": {
-     "id": "obj-151",
+     "id": "obj-153",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -7171,15 +7251,15 @@
      "patching_rect": [
       700,
       100,
-      46,
-      48
+      44,
+      44
      ],
      "presentation": 1,
      "presentation_rect": [
-      1004,
-      98,
-      46,
-      48
+      994,
+      117,
+      44,
+      44
      ],
      "appearance": 0,
      "showname": 1,
@@ -7202,48 +7282,50 @@
       }
      },
      "activedialcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "activeneedlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "focusbordercolor": [
-      0.91,
-      0.914,
-      0.918,
+      0.78,
+      0.796,
+      0.82,
       1.0
      ],
      "dialcolor": [
-      0.082,
-      0.086,
-      0.094,
+      0.227,
+      0.239,
+      0.263,
       1.0
      ],
      "needlecolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.922,
+      0.922,
+      0.91,
       1.0
      ],
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 9.0
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 9.0,
+     "annotation": "MODERN mode: highest corner frequency of the sweep.",
+     "annotation_name": "Modern Hi"
     }
    },
    {
     "box": {
-     "id": "obj-153",
+     "id": "obj-154",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -7263,64 +7345,34 @@
    },
    {
     "box": {
-     "id": "obj-154",
-     "maxclass": "live.comment",
-     "numinlets": 1,
-     "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
-     "textcolor": [
-      0.957,
-      0.957,
-      0.945,
-      1.0
-     ],
-     "text": "Vintage: quirks",
-     "textjustification": 0,
-     "patching_rect": [
-      700,
-      400,
-      92,
-      12
-     ],
-     "presentation": 1,
-     "presentation_rect": [
-      860,
-      104,
-      92,
-      12
-     ]
-    }
-   },
-   {
-    "box": {
      "id": "obj-155",
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
-     "text": "on as lit.",
+     "text": "Lit quirks act",
      "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      92,
-      12
+      88,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      860,
-      116,
-      92,
-      12
-     ]
+      1046,
+      118,
+      88,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -7329,29 +7381,30 @@
      "maxclass": "live.comment",
      "numinlets": 1,
      "numoutlets": 0,
-     "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
-     "text": "Modern: all off,",
+     "text": "in VINTAGE only",
      "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      92,
-      12
+      88,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      860,
-      128,
-      92,
-      12
-     ]
+      1046,
+      130,
+      88,
+      13
+     ],
+     "background": 1
     }
    },
    {
@@ -7361,33 +7414,378 @@
      "numinlets": 1,
      "numoutlets": 0,
      "fontname": "Ableton Sans Bold",
-     "fontsize": 7.5,
+     "fontsize": 8,
      "textcolor": [
-      0.957,
-      0.957,
-      0.945,
+      0.557,
+      0.576,
+      0.608,
       1.0
      ],
-     "text": "clean + matched.",
+     "text": "SIGNAL",
      "textjustification": 0,
      "patching_rect": [
       700,
       400,
-      92,
-      12
+      50,
+      13
      ],
      "presentation": 1,
      "presentation_rect": [
-      860,
-      140,
-      92,
-      12
-     ]
+      640,
+      5,
+      50,
+      13
+     ],
+     "background": 1
     }
    },
    {
     "box": {
      "id": "obj-158",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 2,
+     "numoutlets": 4,
+     "patching_rect": [
+      30,
+      1700,
+      70,
+      22
+     ],
+     "text": "sel 0 1 2",
+     "outlettype": [
+      "bang",
+      "bang",
+      "bang",
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-159",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8.5,
+     "textcolor": [
+      0.922,
+      0.922,
+      0.91,
+      1.0
+     ],
+     "text": "IN  \u2192  A  \u2225  B  \u2192  OUT        (parallel)",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      300,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      688,
+      5,
+      300,
+      13
+     ],
+     "hidden": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-160",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8.5,
+     "textcolor": [
+      0.922,
+      0.922,
+      0.91,
+      1.0
+     ],
+     "text": "IN  \u2192  A  \u2192  B  \u2192  OUT        (series)",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      300,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      688,
+      5,
+      300,
+      13
+     ],
+     "hidden": 0
+    }
+   },
+   {
+    "box": {
+     "id": "obj-161",
+     "maxclass": "live.comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "fontname": "Ableton Sans Medium",
+     "fontsize": 8.5,
+     "textcolor": [
+      0.922,
+      0.922,
+      0.91,
+      1.0
+     ],
+     "text": "L  \u2192  A        R  \u2192  B        (separate)",
+     "textjustification": 0,
+     "patching_rect": [
+      700,
+      400,
+      300,
+      13
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      688,
+      5,
+      300,
+      13
+     ],
+     "hidden": 1
+    }
+   },
+   {
+    "box": {
+     "id": "obj-162",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 1,
+     "numoutlets": 2,
+     "patching_rect": [
+      30,
+      1730,
+      40,
+      22
+     ],
+     "text": "t b b",
+     "outlettype": [
+      "bang",
+      "bang"
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-163",
+     "maxclass": "message",
+     "text": "hidden 0",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      30,
+      1760,
+      60,
+      22
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-164",
+     "maxclass": "message",
+     "text": "hidden 1",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      30,
+      1786,
+      60,
+      22
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-165",
+     "maxclass": "message",
+     "text": "hidden 1",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      30,
+      1812,
+      60,
+      22
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-166",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 1,
+     "numoutlets": 2,
+     "patching_rect": [
+      150,
+      1730,
+      40,
+      22
+     ],
+     "text": "t b b",
+     "outlettype": [
+      "bang",
+      "bang"
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-167",
+     "maxclass": "message",
+     "text": "hidden 1",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      150,
+      1760,
+      60,
+      22
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-168",
+     "maxclass": "message",
+     "text": "hidden 0",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      150,
+      1786,
+      60,
+      22
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-169",
+     "maxclass": "message",
+     "text": "hidden 1",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      150,
+      1812,
+      60,
+      22
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-170",
+     "maxclass": "newobj",
+     "fontname": "Arial Bold",
+     "fontsize": 10.0,
+     "numinlets": 1,
+     "numoutlets": 2,
+     "patching_rect": [
+      270,
+      1730,
+      40,
+      22
+     ],
+     "text": "t b b",
+     "outlettype": [
+      "bang",
+      "bang"
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-171",
+     "maxclass": "message",
+     "text": "hidden 1",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      270,
+      1760,
+      60,
+      22
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-172",
+     "maxclass": "message",
+     "text": "hidden 1",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      270,
+      1786,
+      60,
+      22
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-173",
+     "maxclass": "message",
+     "text": "hidden 0",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      270,
+      1812,
+      60,
+      22
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-174",
      "maxclass": "newobj",
      "fontname": "Arial Bold",
      "fontsize": 10.0,
@@ -7510,7 +7908,7 @@
       0
      ],
      "destination": [
-      "obj-11",
+      "obj-32",
       0
      ]
     }
@@ -7518,7 +7916,7 @@
    {
     "patchline": {
      "source": [
-      "obj-11",
+      "obj-32",
       0
      ],
      "destination": [
@@ -7534,7 +7932,7 @@
       0
      ],
      "destination": [
-      "obj-14",
+      "obj-33",
       0
      ]
     }
@@ -7542,7 +7940,7 @@
    {
     "patchline": {
      "source": [
-      "obj-14",
+      "obj-33",
       0
      ],
      "destination": [
@@ -7558,7 +7956,7 @@
       0
      ],
      "destination": [
-      "obj-17",
+      "obj-34",
       0
      ]
     }
@@ -7566,7 +7964,7 @@
    {
     "patchline": {
      "source": [
-      "obj-17",
+      "obj-34",
       0
      ],
      "destination": [
@@ -7582,7 +7980,7 @@
       0
      ],
      "destination": [
-      "obj-21",
+      "obj-35",
       0
      ]
     }
@@ -7590,11 +7988,11 @@
    {
     "patchline": {
      "source": [
-      "obj-21",
+      "obj-35",
       0
      ],
      "destination": [
-      "obj-22",
+      "obj-36",
       0
      ]
     }
@@ -7602,7 +8000,7 @@
    {
     "patchline": {
      "source": [
-      "obj-22",
+      "obj-36",
       0
      ],
      "destination": [
@@ -7618,7 +8016,7 @@
       0
      ],
      "destination": [
-      "obj-24",
+      "obj-37",
       0
      ]
     }
@@ -7626,11 +8024,11 @@
    {
     "patchline": {
      "source": [
-      "obj-24",
+      "obj-37",
       0
      ],
      "destination": [
-      "obj-25",
+      "obj-38",
       0
      ]
     }
@@ -7638,7 +8036,7 @@
    {
     "patchline": {
      "source": [
-      "obj-25",
+      "obj-38",
       0
      ],
      "destination": [
@@ -7654,7 +8052,7 @@
       0
      ],
      "destination": [
-      "obj-29",
+      "obj-40",
       0
      ]
     }
@@ -7662,7 +8060,7 @@
    {
     "patchline": {
      "source": [
-      "obj-29",
+      "obj-40",
       0
      ],
      "destination": [
@@ -7678,7 +8076,7 @@
       0
      ],
      "destination": [
-      "obj-31",
+      "obj-41",
       0
      ]
     }
@@ -7686,12 +8084,84 @@
    {
     "patchline": {
      "source": [
-      "obj-31",
+      "obj-41",
       0
      ],
      "destination": [
       "obj-1",
       0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-46",
+      2
+     ],
+     "destination": [
+      "obj-48",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-48",
+      0
+     ],
+     "destination": [
+      "obj-47",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-46",
+      1
+     ],
+     "destination": [
+      "obj-50",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-50",
+      0
+     ],
+     "destination": [
+      "obj-47",
+      1
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-46",
+      0
+     ],
+     "destination": [
+      "obj-51",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-51",
+      0
+     ],
+     "destination": [
+      "obj-47",
+      2
      ]
     }
    },
@@ -7702,7 +8172,7 @@
       4
      ],
      "destination": [
-      "obj-33",
+      "obj-44",
       0
      ]
     }
@@ -7710,11 +8180,11 @@
    {
     "patchline": {
      "source": [
-      "obj-33",
+      "obj-44",
       0
      ],
      "destination": [
-      "obj-34",
+      "obj-46",
       0
      ]
     }
@@ -7722,11 +8192,11 @@
    {
     "patchline": {
      "source": [
-      "obj-34",
-      1
+      "obj-47",
+      0
      ],
      "destination": [
-      "obj-36",
+      "obj-52",
       0
      ]
     }
@@ -7734,59 +8204,11 @@
    {
     "patchline": {
      "source": [
-      "obj-34",
+      "obj-52",
       0
      ],
      "destination": [
-      "obj-35",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-36",
-      0
-     ],
-     "destination": [
-      "obj-37",
-      1
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-35",
-      0
-     ],
-     "destination": [
-      "obj-37",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-37",
-      0
-     ],
-     "destination": [
-      "obj-38",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-38",
-      0
-     ],
-     "destination": [
-      "obj-32",
+      "obj-43",
       0
      ]
     }
@@ -7798,7 +8220,7 @@
       0
      ],
      "destination": [
-      "obj-43",
+      "obj-54",
       0
      ]
     }
@@ -7806,11 +8228,11 @@
    {
     "patchline": {
      "source": [
-      "obj-43",
+      "obj-54",
       0
      ],
      "destination": [
-      "obj-44",
+      "obj-55",
       0
      ]
     }
@@ -7818,7 +8240,7 @@
    {
     "patchline": {
      "source": [
-      "obj-44",
+      "obj-55",
       0
      ],
      "destination": [
@@ -7834,7 +8256,7 @@
       0
      ],
      "destination": [
-      "obj-46",
+      "obj-56",
       0
      ]
     }
@@ -7842,11 +8264,11 @@
    {
     "patchline": {
      "source": [
-      "obj-46",
+      "obj-56",
       0
      ],
      "destination": [
-      "obj-47",
+      "obj-58",
       0
      ]
     }
@@ -7854,7 +8276,7 @@
    {
     "patchline": {
      "source": [
-      "obj-47",
+      "obj-58",
       0
      ],
      "destination": [
@@ -7870,7 +8292,7 @@
       0
      ],
      "destination": [
-      "obj-50",
+      "obj-61",
       0
      ]
     }
@@ -7878,7 +8300,7 @@
    {
     "patchline": {
      "source": [
-      "obj-50",
+      "obj-61",
       0
      ],
      "destination": [
@@ -7894,7 +8316,7 @@
       0
      ],
      "destination": [
-      "obj-54",
+      "obj-63",
       0
      ]
     }
@@ -7902,7 +8324,7 @@
    {
     "patchline": {
      "source": [
-      "obj-54",
+      "obj-63",
       0
      ],
      "destination": [
@@ -7918,7 +8340,7 @@
       0
      ],
      "destination": [
-      "obj-58",
+      "obj-65",
       0
      ]
     }
@@ -7926,7 +8348,7 @@
    {
     "patchline": {
      "source": [
-      "obj-58",
+      "obj-65",
       0
      ],
      "destination": [
@@ -7942,7 +8364,7 @@
       0
      ],
      "destination": [
-      "obj-60",
+      "obj-66",
       0
      ]
     }
@@ -7950,12 +8372,84 @@
    {
     "patchline": {
      "source": [
-      "obj-60",
+      "obj-66",
       0
      ],
      "destination": [
       "obj-1",
       0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-69",
+      2
+     ],
+     "destination": [
+      "obj-72",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-72",
+      0
+     ],
+     "destination": [
+      "obj-70",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-69",
+      1
+     ],
+     "destination": [
+      "obj-73",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-73",
+      0
+     ],
+     "destination": [
+      "obj-70",
+      1
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-69",
+      0
+     ],
+     "destination": [
+      "obj-75",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-75",
+      0
+     ],
+     "destination": [
+      "obj-70",
+      2
      ]
     }
    },
@@ -7966,7 +8460,7 @@
       5
      ],
      "destination": [
-      "obj-62",
+      "obj-68",
       0
      ]
     }
@@ -7974,11 +8468,11 @@
    {
     "patchline": {
      "source": [
-      "obj-62",
+      "obj-68",
       0
      ],
      "destination": [
-      "obj-63",
+      "obj-69",
       0
      ]
     }
@@ -7986,23 +8480,11 @@
    {
     "patchline": {
      "source": [
-      "obj-63",
-      1
-     ],
-     "destination": [
-      "obj-65",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-63",
+      "obj-70",
       0
      ],
      "destination": [
-      "obj-64",
+      "obj-76",
       0
      ]
     }
@@ -8010,47 +8492,11 @@
    {
     "patchline": {
      "source": [
-      "obj-65",
-      0
-     ],
-     "destination": [
-      "obj-66",
-      1
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-64",
-      0
-     ],
-     "destination": [
-      "obj-66",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-66",
+      "obj-76",
       0
      ],
      "destination": [
       "obj-67",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-67",
-      0
-     ],
-     "destination": [
-      "obj-61",
       0
      ]
     }
@@ -8062,7 +8508,7 @@
       0
      ],
      "destination": [
-      "obj-72",
+      "obj-80",
       0
      ]
     }
@@ -8070,7 +8516,7 @@
    {
     "patchline": {
      "source": [
-      "obj-72",
+      "obj-80",
       0
      ],
      "destination": [
@@ -8086,7 +8532,7 @@
       0
      ],
      "destination": [
-      "obj-75",
+      "obj-82",
       0
      ]
     }
@@ -8094,7 +8540,7 @@
    {
     "patchline": {
      "source": [
-      "obj-75",
+      "obj-82",
       0
      ],
      "destination": [
@@ -8110,7 +8556,7 @@
       0
      ],
      "destination": [
-      "obj-79",
+      "obj-87",
       0
      ]
     }
@@ -8118,11 +8564,11 @@
    {
     "patchline": {
      "source": [
-      "obj-79",
+      "obj-87",
       0
      ],
      "destination": [
-      "obj-80",
+      "obj-88",
       0
      ]
     }
@@ -8130,7 +8576,7 @@
    {
     "patchline": {
      "source": [
-      "obj-80",
+      "obj-88",
       0
      ],
      "destination": [
@@ -8146,7 +8592,7 @@
       0
      ],
      "destination": [
-      "obj-82",
+      "obj-90",
       0
      ]
     }
@@ -8154,7 +8600,7 @@
    {
     "patchline": {
      "source": [
-      "obj-82",
+      "obj-90",
       0
      ],
      "destination": [
@@ -8170,7 +8616,7 @@
       0
      ],
      "destination": [
-      "obj-84",
+      "obj-91",
       0
      ]
     }
@@ -8178,7 +8624,7 @@
    {
     "patchline": {
      "source": [
-      "obj-84",
+      "obj-91",
       0
      ],
      "destination": [
@@ -8194,7 +8640,7 @@
       0
      ],
      "destination": [
-      "obj-86",
+      "obj-92",
       0
      ]
     }
@@ -8202,7 +8648,7 @@
    {
     "patchline": {
      "source": [
-      "obj-86",
+      "obj-92",
       0
      ],
      "destination": [
@@ -8218,7 +8664,7 @@
       0
      ],
      "destination": [
-      "obj-90",
+      "obj-97",
       0
      ]
     }
@@ -8226,11 +8672,11 @@
    {
     "patchline": {
      "source": [
-      "obj-90",
+      "obj-97",
       0
      ],
      "destination": [
-      "obj-91",
+      "obj-98",
       0
      ]
     }
@@ -8238,7 +8684,7 @@
    {
     "patchline": {
      "source": [
-      "obj-91",
+      "obj-98",
       0
      ],
      "destination": [
@@ -8254,7 +8700,7 @@
       0
      ],
      "destination": [
-      "obj-97",
+      "obj-106",
       0
      ]
     }
@@ -8262,11 +8708,11 @@
    {
     "patchline": {
      "source": [
-      "obj-97",
+      "obj-106",
       0
      ],
      "destination": [
-      "obj-98",
+      "obj-108",
       0
      ]
     }
@@ -8274,7 +8720,7 @@
    {
     "patchline": {
      "source": [
-      "obj-98",
+      "obj-108",
       0
      ],
      "destination": [
@@ -8290,7 +8736,7 @@
       0
      ],
      "destination": [
-      "obj-100",
+      "obj-109",
       0
      ]
     }
@@ -8298,7 +8744,7 @@
    {
     "patchline": {
      "source": [
-      "obj-100",
+      "obj-109",
       0
      ],
      "destination": [
@@ -8314,7 +8760,7 @@
       0
      ],
      "destination": [
-      "obj-102",
+      "obj-111",
       0
      ]
     }
@@ -8322,7 +8768,7 @@
    {
     "patchline": {
      "source": [
-      "obj-102",
+      "obj-111",
       0
      ],
      "destination": [
@@ -8338,7 +8784,7 @@
       0
      ],
      "destination": [
-      "obj-104",
+      "obj-112",
       0
      ]
     }
@@ -8346,7 +8792,7 @@
    {
     "patchline": {
      "source": [
-      "obj-104",
+      "obj-112",
       0
      ],
      "destination": [
@@ -8362,7 +8808,7 @@
       0
      ],
      "destination": [
-      "obj-106",
+      "obj-114",
       0
      ]
     }
@@ -8370,7 +8816,7 @@
    {
     "patchline": {
      "source": [
-      "obj-106",
+      "obj-114",
       0
      ],
      "destination": [
@@ -8386,7 +8832,7 @@
       0
      ],
      "destination": [
-      "obj-108",
+      "obj-115",
       0
      ]
     }
@@ -8394,7 +8840,7 @@
    {
     "patchline": {
      "source": [
-      "obj-108",
+      "obj-115",
       0
      ],
      "destination": [
@@ -8410,7 +8856,7 @@
       0
      ],
      "destination": [
-      "obj-111",
+      "obj-116",
       0
      ]
     }
@@ -8418,7 +8864,7 @@
    {
     "patchline": {
      "source": [
-      "obj-111",
+      "obj-116",
       0
      ],
      "destination": [
@@ -8434,66 +8880,6 @@
       0
      ],
      "destination": [
-      "obj-114",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-114",
-      0
-     ],
-     "destination": [
-      "obj-115",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-115",
-      0
-     ],
-     "destination": [
-      "obj-116",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-115",
-      1
-     ],
-     "destination": [
-      "obj-117",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-116",
-      0
-     ],
-     "destination": [
-      "obj-118",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "source": [
-      "obj-117",
-      0
-     ],
-     "destination": [
       "obj-119",
       0
      ]
@@ -8502,7 +8888,67 @@
    {
     "patchline": {
      "source": [
-      "obj-118",
+      "obj-119",
+      0
+     ],
+     "destination": [
+      "obj-120",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-120",
+      0
+     ],
+     "destination": [
+      "obj-121",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-120",
+      1
+     ],
+     "destination": [
+      "obj-122",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-121",
+      0
+     ],
+     "destination": [
+      "obj-123",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-122",
+      0
+     ],
+     "destination": [
+      "obj-125",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-123",
       0
      ],
      "destination": [
@@ -8514,7 +8960,7 @@
    {
     "patchline": {
      "source": [
-      "obj-119",
+      "obj-125",
       0
      ],
      "destination": [
@@ -8526,11 +8972,11 @@
    {
     "patchline": {
      "source": [
-      "obj-158",
+      "obj-174",
       0
      ],
      "destination": [
-      "obj-125",
+      "obj-127",
       0
      ]
     }
@@ -8538,7 +8984,7 @@
    {
     "patchline": {
      "source": [
-      "obj-125",
+      "obj-127",
       0
      ],
      "destination": [
@@ -8554,7 +9000,7 @@
       0
      ],
      "destination": [
-      "obj-127",
+      "obj-129",
       0
      ]
     }
@@ -8562,7 +9008,7 @@
    {
     "patchline": {
      "source": [
-      "obj-127",
+      "obj-129",
       0
      ],
      "destination": [
@@ -8578,7 +9024,7 @@
       0
      ],
      "destination": [
-      "obj-129",
+      "obj-131",
       0
      ]
     }
@@ -8586,7 +9032,7 @@
    {
     "patchline": {
      "source": [
-      "obj-129",
+      "obj-131",
       0
      ],
      "destination": [
@@ -8602,7 +9048,7 @@
       0
      ],
      "destination": [
-      "obj-131",
+      "obj-133",
       0
      ]
     }
@@ -8610,7 +9056,7 @@
    {
     "patchline": {
      "source": [
-      "obj-131",
+      "obj-133",
       0
      ],
      "destination": [
@@ -8626,7 +9072,7 @@
       0
      ],
      "destination": [
-      "obj-133",
+      "obj-135",
       0
      ]
     }
@@ -8634,7 +9080,7 @@
    {
     "patchline": {
      "source": [
-      "obj-133",
+      "obj-135",
       0
      ],
      "destination": [
@@ -8650,7 +9096,7 @@
       0
      ],
      "destination": [
-      "obj-135",
+      "obj-137",
       0
      ]
     }
@@ -8658,7 +9104,7 @@
    {
     "patchline": {
      "source": [
-      "obj-135",
+      "obj-137",
       0
      ],
      "destination": [
@@ -8674,7 +9120,7 @@
       0
      ],
      "destination": [
-      "obj-137",
+      "obj-139",
       0
      ]
     }
@@ -8682,7 +9128,7 @@
    {
     "patchline": {
      "source": [
-      "obj-137",
+      "obj-139",
       0
      ],
      "destination": [
@@ -8698,7 +9144,7 @@
       0
      ],
      "destination": [
-      "obj-139",
+      "obj-141",
       0
      ]
     }
@@ -8706,7 +9152,7 @@
    {
     "patchline": {
      "source": [
-      "obj-139",
+      "obj-141",
       0
      ],
      "destination": [
@@ -8722,7 +9168,7 @@
       0
      ],
      "destination": [
-      "obj-141",
+      "obj-143",
       0
      ]
     }
@@ -8730,7 +9176,7 @@
    {
     "patchline": {
      "source": [
-      "obj-141",
+      "obj-143",
       0
      ],
      "destination": [
@@ -8746,7 +9192,7 @@
       0
      ],
      "destination": [
-      "obj-143",
+      "obj-145",
       0
      ]
     }
@@ -8754,7 +9200,7 @@
    {
     "patchline": {
      "source": [
-      "obj-143",
+      "obj-145",
       0
      ],
      "destination": [
@@ -8770,7 +9216,7 @@
       0
      ],
      "destination": [
-      "obj-145",
+      "obj-146",
       0
      ]
     }
@@ -8778,7 +9224,7 @@
    {
     "patchline": {
      "source": [
-      "obj-145",
+      "obj-146",
       0
      ],
      "destination": [
@@ -8794,7 +9240,7 @@
       0
      ],
      "destination": [
-      "obj-148",
+      "obj-149",
       0
      ]
     }
@@ -8802,7 +9248,7 @@
    {
     "patchline": {
      "source": [
-      "obj-148",
+      "obj-149",
       0
      ],
      "destination": [
@@ -8818,7 +9264,7 @@
       0
      ],
      "destination": [
-      "obj-151",
+      "obj-153",
       0
      ]
     }
@@ -8826,7 +9272,7 @@
    {
     "patchline": {
      "source": [
-      "obj-151",
+      "obj-153",
       0
      ],
      "destination": [
@@ -8842,7 +9288,7 @@
       0
      ],
      "destination": [
-      "obj-153",
+      "obj-154",
       0
      ]
     }
@@ -8850,7 +9296,7 @@
    {
     "patchline": {
      "source": [
-      "obj-153",
+      "obj-154",
       0
      ],
      "destination": [
@@ -8862,11 +9308,275 @@
    {
     "patchline": {
      "source": [
-      "obj-124",
+      "obj-53",
       0
      ],
      "destination": [
       "obj-158",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-158",
+      0
+     ],
+     "destination": [
+      "obj-162",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-162",
+      0
+     ],
+     "destination": [
+      "obj-163",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-163",
+      0
+     ],
+     "destination": [
+      "obj-159",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-162",
+      1
+     ],
+     "destination": [
+      "obj-164",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-164",
+      0
+     ],
+     "destination": [
+      "obj-160",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-162",
+      1
+     ],
+     "destination": [
+      "obj-165",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-165",
+      0
+     ],
+     "destination": [
+      "obj-161",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-158",
+      1
+     ],
+     "destination": [
+      "obj-166",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-166",
+      1
+     ],
+     "destination": [
+      "obj-167",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-167",
+      0
+     ],
+     "destination": [
+      "obj-159",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-166",
+      0
+     ],
+     "destination": [
+      "obj-168",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-168",
+      0
+     ],
+     "destination": [
+      "obj-160",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-166",
+      1
+     ],
+     "destination": [
+      "obj-169",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-169",
+      0
+     ],
+     "destination": [
+      "obj-161",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-158",
+      2
+     ],
+     "destination": [
+      "obj-170",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-170",
+      1
+     ],
+     "destination": [
+      "obj-171",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-171",
+      0
+     ],
+     "destination": [
+      "obj-159",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-170",
+      1
+     ],
+     "destination": [
+      "obj-172",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-172",
+      0
+     ],
+     "destination": [
+      "obj-160",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-170",
+      0
+     ],
+     "destination": [
+      "obj-173",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-173",
+      0
+     ],
+     "destination": [
+      "obj-161",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-124",
+      0
+     ],
+     "destination": [
+      "obj-174",
       0
      ]
     }

@@ -29,12 +29,29 @@ BANKS = [  # S4: Push / bank order, most-played first (8 per bank)
 ]
 
 
+DEV_NAME = ["Twin Phasor 76"]
+PIN_IDS = json.loads((Path(__file__).resolve().parent / "param_ids_s4.json").read_text())
+
+
 def finalize(patch):
     """S2: bring the generated patch in line with what Max itself writes (compared against
     Ableton's maxdevtools sample devices). Live crashed on load of the S1 build."""
     P = patch["patcher"]
-    # 1. Max-style object ids (obj-N); remap patchlines
-    idmap = {b["box"]["id"]: f"obj-{i + 1}" for i, b in enumerate(P["boxes"])}
+    # 1. Max-style object ids (obj-N); remap patchlines. Parameter objects keep their S4 ids
+    #    (UI redesign, 2026-11-18) so saved sets, presets and automation still find them.
+    pins = PIN_IDS.get(DEV_NAME[0], {})
+    idmap, used = {}, {v[0] for v in pins.values()}
+    for b in P["boxes"]:
+        v = b["box"].get("saved_attribute_attributes", {}).get("valueof")
+        if v and v["parameter_longname"] in pins:
+            idmap[b["box"]["id"]] = pins[v["parameter_longname"]][0]
+    n = 0
+    for b in P["boxes"]:
+        if b["box"]["id"] not in idmap:
+            n += 1
+            while f"obj-{n}" in used:
+                n += 1
+            idmap[b["box"]["id"]] = f"obj-{n}"
     for b in P["boxes"]:
         b["box"]["id"] = idmap[b["box"]["id"]]
     for l in P["lines"]:
@@ -83,6 +100,9 @@ def finalize(patch):
         order.append(("More" if i == 0 else f"More {i // 8 + 1}", rest[i:i + 8]))
     for i, (name, chunk) in enumerate(order):
         banks[str(i)] = {"index": i, "name": name, "parameters": chunk + ["-"] * (8 - len(chunk))}
+    # keep the S4 parameter order
+    porder = {v[0]: v[1] for v in pins.values()}
+    params = dict(sorted(params.items(), key=lambda kv: porder.get(kv[0], 10 ** 6)))
     params["parameterbanks"] = banks
     params["inherited_shortname"] = 1
     P["parameters"] = params
@@ -98,22 +118,34 @@ from m4l_builder import ui
 from m4l_builder.constants import AUDIO_EFFECT
 import gen_dsp
 
-# ---------------- palette: sampled from a photo of an original unit (S3, 2026-11-17) ----------------
-FACE_DARK = [0.216, 0.314, 0.663, 1.0]   # panel blue (photo mode #3750a9)
-FACE_LITE = [0.239, 0.345, 0.698, 1.0]   # same blue, barely lifted, for a hint of sheen
-SILVER = [0.91, 0.914, 0.918, 1.0]      # white/silver section outlines
-CASE = [0.788, 0.792, 0.8, 1.0]        # brushed aluminium case
-BLACK = [0.184, 0.192, 0.204, 1.0]       # charcoal switch blocks (photo #383a36, darkened slightly for Live)
-LEGEND = [0.957, 0.957, 0.945, 1.0]      # white legends
-KNOB_BG = [0.082, 0.086, 0.094, 1.0]     # black knob caps
-LEVER_BLUE = [0.659, 0.792, 0.91, 1.0]  # light-blue lever switches (rate control, sweep)
-LEVER_GREY = [0.604, 0.62, 0.639, 1.0]  # grey lever switches (shape)
-LEVER_RED = [0.906, 0.18, 0.141, 1.0]   # red Sweep Sync lever
-LEVER_CREAM = [0.847, 0.827, 0.753, 1.0] # cream Phasor B Input knob
-LED_OFF = [0.227, 0.047, 0.047, 1.0]
+# ---------------- palette ----------------
+# UI redesign (2026-11-18): graphite body, functional accents. The S3 Bi-Phase palette is kept
+# as THEME "classic" (python3 src/build_device.py --theme classic).
+THEME = sys.argv[sys.argv.index("--theme") + 1] if "--theme" in sys.argv else "graphite"
+h = lambda x, a=1.0: [round(int(x[i:i + 2], 16) / 255, 3) for i in (1, 3, 5)] + [a]
+if THEME == "classic":
+    FACE_DARK, FACE_LITE, CASE = h("#3750a9"), h("#3d58b2"), h("#c9cacc")
+    SECTION, SECTION_LINE = h("#33499c"), h("#f4f4f1")
+    INK, INK2, CTRL, CTRL_LINE = h("#f4f4f1"), h("#dfe6f5"), h("#2f3134"), h("#f4f4f1")
+    ACC_A, ACC_B, ACC_N = h("#a8cae8"), h("#d8d3c0"), h("#e8e9ea")
+    ON_N = ACC_N
+    ON_N_INK = h("#151618")
+    ON_INK = h("#151618")
+else:
+    FACE_DARK, FACE_LITE, CASE = h("#1b1c1f"), h("#1b1c1f"), h("#121315")
+    SECTION, SECTION_LINE = h("#232529"), h("#2e3136")
+    INK, INK2, CTRL, CTRL_LINE = h("#ebebe8"), h("#8e939b"), h("#2b2e33"), h("#3a3e45")
+    ACC_A = h("#6aa2dc")   # Phasor A: restrained cool blue
+    ACC_B = h("#e0a250")   # Phasor B: restrained warm amber
+    ACC_N = h("#c7cbd1")   # shared / global: neutral (arcs, focus)
+    ON_N = h("#5b616b")    # neutral switch "on" fill: lifted grey, not white
+    ON_N_INK = h("#ebebe8")
+    ON_INK = h("#141517")
+TRACK = h("#3a3d43")       # unlit part of dial arcs
 CLEAR = [0, 0, 0, 0]
+FONT, FONT_B = "Ableton Sans Medium", "Ableton Sans Bold"
 
-W, H = 1064, 169
+W, H = 1144, 169
 boxes, lines = [], []
 _n = [0]
 
@@ -143,13 +175,6 @@ def set_init(box_id, value, shortname=None, longname=None):
             if longname:
                 v["parameter_longname"] = longname
 
-
-DIAL_STYLE = dict(activedialcolor=LEGEND, dialcolor=KNOB_BG, needlecolor=LEGEND,
-                  activeneedlecolor=LEGEND, textcolor=LEGEND, focusbordercolor=SILVER,
-                  fontname="Ableton Sans Bold", fontsize=9.0)
-TAB_STYLE = dict(bgcolor=BLACK, activebgcolor=BLACK, bgoncolor=SILVER, activebgoncolor=SILVER,
-                 textcolor=LEGEND, activetextcolor=LEGEND, textoncolor=BLACK, activetextoncolor=BLACK,
-                 bordercolor=SILVER, focusbordercolor=SILVER, fontname="Ableton Sans Bold", fontsize=8.5)
 
 # --------------------------- gen~ with embedded codebox ---------------------------
 code = gen_dsp.build()
@@ -200,158 +225,201 @@ def to_gen(ctrl_id, param, scale=None):
     line(src, 0, p, 0); line(p, 0, GEN, 0)
 
 
-# ------------------------------------ panel art ------------------------------------
-add(ui.panel("bg_case", [0, 0, W, H], bgcolor=CASE, bgfillcolor={"type": "color", "color": CASE}))
-add(ui.panel("bg_face", [3, 3, W - 6, H - 6], bgcolor=FACE_DARK, rounded=4,
-             bgfillcolor={"type": "gradient", "color1": FACE_DARK, "color2": FACE_LITE, "color": FACE_DARK,
-                          "angle": 0.0, "proportion": 0.5, "autogradient": 0}))
+# ------------------------------------ panel ------------------------------------
+# UI redesign 2026-11-18. Layout only: every control keeps its S4 parameter name, range, default,
+# enum and object id (see src/param_ids_s4.json, enforced by tests/test_build.py B14).
 
 
-def group(x, w, title):
-    add(ui.panel(nid("grp"), [x, 7, w, H - 14], bgcolor=CLEAR, border=1.5, bordercolor=LEGEND, rounded=8,
-                 bgfillcolor={"type": "color", "color": CLEAR}))
-    add(ui.comment(nid("ttl"), [x + 4, 9, w - 8, 14], title, textcolor=LEGEND, fontsize=9.5,
-                   fontname="Ableton Sans Bold", justification=1))
+def deco(b):
+    """Decorative panels/labels sit in the background layer so they never cover a control."""
+    b["box"]["background"] = 1
+    return add(b)
 
 
-def block(x, y, w, h, outlined=False):
-    if outlined:
-        add(ui.panel(nid("blk"), [x, y, w, h], bgcolor=CLEAR, border=1.5, bordercolor=LEGEND, rounded=6,
-                     bgfillcolor={"type": "color", "color": CLEAR}))
-    else:
-        add(ui.panel(nid("blk"), [x, y, w, h], bgcolor=BLACK, rounded=3, bgfillcolor={"type": "color", "color": BLACK}))
+def fill(c):
+    return {"type": "color", "color": c}
 
 
-def label(x, y, w, text, size=8.0, just=1):
-    add(ui.comment(nid("lb"), [x, y, w, 12], text, textcolor=LEGEND, fontsize=size, fontname="Ableton Sans Bold", justification=just))
+def rect(x, y, w, h_, color, r=0, border=None):
+    kw = dict(bgcolor=color, rounded=r, bgfillcolor=fill(color))
+    if border:
+        kw.update(border=1, bordercolor=border)
+    return deco(ui.panel(nid("p"), [x, y, w, h_], **kw))
 
 
-def dial(x, y, var, short, mn, mx, init, unit, param, scale=None, exp=1.0, w=46, h=50):
+def label(x, y, w, text, size=8.5, just=0, color=None, bold=False):
+    return deco(ui.comment(nid("lb"), [x, y, w, 13], text, textcolor=color or INK2, fontsize=size,
+                           fontname=FONT_B if bold else FONT, justification=just))
+
+
+def section(x, w, title, acc):
+    rect(x, TOP, w, BOT - TOP, SECTION, r=6, border=SECTION_LINE)
+    rect(x + 8, TOP + 7, 3, 11, acc, r=1)
+    label(x + 15, TOP + 5, w - 20, title, size=10, color=INK, bold=True)
+
+
+def dial(x, y, var, short, mn, mx, init, unit, param, scale=None, exp=1.0, w=46, h=50, acc=None, tip=""):
     d = add(ui.dial(nid("d"), var, [x, y, w, h], min_val=mn, max_val=mx, initial=init, shortname=short,
-                    unitstyle=unit, parameter_exponent=exp, **DIAL_STYLE))
+                    unitstyle=unit, parameter_exponent=exp, activedialcolor=acc or ACC_N, dialcolor=TRACK,
+                    needlecolor=INK, activeneedlecolor=INK, textcolor=INK, focusbordercolor=acc or ACC_N,
+                    fontname=FONT, fontsize=9.0, annotation=tip, annotation_name=var))
     to_gen(d, param, scale)
     return d
 
 
-def lever(color, text_on=None):
-    """Tab style whose selected segment takes the colour of the original's lever switch."""
-    st = dict(TAB_STYLE)
-    st.update(bgoncolor=color, activebgoncolor=color)
-    if text_on:
-        st.update(textoncolor=text_on, activetextoncolor=text_on)
-    return st
-
-
-def tab(x, y, w, h, var, short, options, init, param, multiline=0, style=None):
-    t = add(ui.tab(nid("t"), var, [x, y, w, h], options=options, **(style or TAB_STYLE)))
+def tab(x, y, w, h, var, short, options, init, param, acc=None, tip="", fs=8.5):
+    a = acc or ON_N
+    ink_on = ON_INK if acc else ON_N_INK
+    t = add(ui.tab(nid("t"), var, [x, y, w, h], options=options, bgcolor=CTRL, activebgcolor=CTRL,
+                   bgoncolor=a, activebgoncolor=a, textcolor=INK2, activetextcolor=INK2, textoncolor=ink_on,
+                   activetextoncolor=ink_on, bordercolor=CTRL_LINE, focusbordercolor=a,
+                   fontname=FONT_B, fontsize=fs, annotation=tip, annotation_name=var))
     set_init(t, init, shortname=short)
     to_gen(t, param)
     return t
 
 
-def txt(x, y, w, h, var, short, off, on, init, param, mode=0):
-    t = add(ui.live_text(nid("x"), var, [x, y, w, h], text_off=off, text_on=on, shortname=short, mode=mode,
-                         bgcolor=BLACK, bgoncolor=SILVER, textcolor=LEGEND, textoncolor=BLACK, rounded=3.0,
-                         fontname="Ableton Sans Bold", fontsize=8.5,
-                         activebgcolor=BLACK, activebgoncolor=SILVER, activetextcolor=LEGEND,
-                         activetextoncolor=BLACK, bordercolor=SILVER))
+def txt(x, y, w, h, var, short, off, on, init, param, acc=None, tip=""):
+    a = acc or ON_N
+    ink_on = ON_INK if acc else ON_N_INK
+    t = add(ui.live_text(nid("x"), var, [x, y, w, h], text_off=off, text_on=on, shortname=short,
+                         bgcolor=CTRL, bgoncolor=a, textcolor=INK2, textoncolor=ink_on, rounded=3.0,
+                         fontname=FONT_B, fontsize=8.5, activebgcolor=CTRL, activebgoncolor=a,
+                         activetextcolor=INK2, activetextoncolor=ink_on, bordercolor=CTRL_LINE,
+                         annotation=tip, annotation_name=var))
     set_init(t, init)
     to_gen(t, param)
     return t
 
 
-def menu(x, y, w, var, short, options, init, param=None):
+def menu(x, y, w, var, short, options, init, param=None, tip=""):
     m = add(ui.menu(nid("m"), var, [x, y, w, 15], options=options, shortname=short,
-                    bgcolor=BLACK, activebgcolor=BLACK, textcolor=LEGEND, activetextcolor=LEGEND,
-                    tricolor=SILVER, bordercolor=SILVER, fontname="Ableton Sans Bold", fontsize=8.5))
+                    bgcolor=CTRL, activebgcolor=CTRL, textcolor=INK, activetextcolor=INK,
+                    tricolor=INK2, bordercolor=CTRL_LINE, fontname=FONT, fontsize=9.0,
+                    annotation=tip, annotation_name=var))
     set_init(m, init)
     if param:
         to_gen(m, param)
     return m
 
 
-def led(x, y, gen_outlet):
-    lp = add(ui.panel(nid("led"), [x, y, 12, 12], bgcolor=LED_OFF, rounded=12, border=1, bordercolor=BLACK,
-                      bgfillcolor={"type": "color", "color": LED_OFF}))
+def led(x, y, gen_outlet, acc):
+    """Sweep-position lamp: brightness follows the modelled light level, in the section's accent."""
+    lp = add(ui.panel(nid("led"), [x, y, 9, 9], bgcolor=TRACK, rounded=9, bgfillcolor=fill(TRACK)))
     y0 = _py[0]; _py[0] += 26
     s = add(newobj(nid("snap"), "snapshot~ 33", numinlets=2, numoutlets=1, outlettype=["float"], patching_rect=[800, y0, 80, 22]))
-    t = add(newobj(nid("tff"), "t f f", numinlets=1, numoutlets=2, outlettype=["float", "float"], patching_rect=[890, y0, 40, 22]))
-    er = add(newobj(nid("er"), "expr 0.23+0.77*$f1", numinlets=1, numoutlets=1, outlettype=[""], patching_rect=[940, y0, 110, 22]))
-    eg = add(newobj(nid("eg"), "expr 0.05+0.13*$f1", numinlets=1, numoutlets=1, outlettype=[""], patching_rect=[1060, y0, 110, 22]))
-    pk = add(newobj(nid("pk"), "pack 0. 0. 0.04 1.", numinlets=4, numoutlets=1, outlettype=[""], patching_rect=[1180, y0, 100, 22]))
-    pr = add(newobj(nid("pr"), "prepend bgfillcolor", numinlets=1, numoutlets=1, outlettype=[""], patching_rect=[1290, y0, 110, 22]))
-    line(GEN, gen_outlet, s, 0); line(s, 0, t, 0); line(t, 1, eg, 0); line(t, 0, er, 0)
-    line(eg, 0, pk, 1); line(er, 0, pk, 0); line(pk, 0, pr, 0); line(pr, 0, lp, 0)
+    t = add(newobj(nid("tff"), "t f f f", numinlets=1, numoutlets=3, outlettype=["float"] * 3, patching_rect=[890, y0, 50, 22]))
+    pk = add(newobj(nid("pk"), "pack 0. 0. 0. 1.", numinlets=4, numoutlets=1, outlettype=[""], patching_rect=[1300, y0, 100, 22]))
+    for k in range(3):
+        lo, hi = TRACK[k], acc[k]
+        e = add(newobj(nid("e"), f"expr {lo}+{round(hi - lo, 3)}*$f1", numinlets=1, numoutlets=1, outlettype=[""],
+                       patching_rect=[950 + 115 * k, y0, 110, 22]))
+        line(t, 2 - k, e, 0); line(e, 0, pk, k)
+    pr = add(newobj(nid("pr"), "prepend bgfillcolor", numinlets=1, numoutlets=1, outlettype=[""], patching_rect=[1410, y0, 110, 22]))
+    line(GEN, gen_outlet, s, 0); line(s, 0, t, 0); line(pk, 0, pr, 0); line(pr, 0, lp, 0)
 
 
-DY = 22  # first control row
+TOP, BOT = 24, 165
+add(ui.panel("bg_face", [0, 0, W, H], bgcolor=FACE_DARK, bgfillcolor=fill(FACE_DARK)))
+boxes[-1]["box"]["background"] = 1
+# header strip
+label(10, 4, 140, "TWIN PHASOR 76", size=11, color=INK, bold=True)
+label(128, 5, 300, "ECHOLIVITY  ·  DUAL OPTICAL PHASER", size=8.5)
 
-# SWEEP GENERATOR 1
-x = 8; group(x, 112, "SWEEP GEN 1")
-dial(x + 4, DY, "Gen1 Rate", "G1 Rate", 0.1, 18.0, 0.6, 3, "g1_rate", exp=3.0)
-label(x + 54, DY + 2, 52, "SHAPE")
-tab(x + 54, DY + 14, 52, 15, "Gen1 Shape", "G1 Shape", ["SINE", "SQR"], 0, "g1_shape", style=lever(LEVER_GREY))
-label(x + 54, DY + 34, 52, "RATE")
-tab(x + 54, DY + 46, 52, 15, "Gen1 Rate Src", "G1 Src", ["MAN", "PED"], 0, "g1_src", style=lever(LEVER_BLUE))
+# ---- controls are created in the same order as S4 (ids are pinned anyway) ----
+XA, XM, XB, XO, XC = 6, 180, 504, 760, 942
+section(XA, 168, "PHASOR A", ACC_A)
+section(XM, 318, "MODULATION", ACC_N)
+section(XB, 250, "PHASOR B", ACC_B)
+section(XO, 176, "OUTPUT", ACC_N)
+section(XC, 196, "CHARACTER", ACC_N)
+
+# SWEEP GENERATOR 1  (Modulation, left column)
+x = XM
+label(x + 60, 41, 60, "GEN 1", size=8, bold=True)
+dial(x + 6, 42, "Gen1 Rate", "G1 Rate", 0.1, 18.0, 0.6, 3, "g1_rate", exp=3.0, w=46, h=48,
+     tip="Sweep generator 1 speed, 0.1-18 Hz. Drives Phasor A, and Phasor B when B Sweep = G1.")
+tab(x + 58, 55, 62, 15, "Gen1 Shape", "G1 Shape", ["SINE", "SQR"], 0, "g1_shape", tip="Gen 1 waveform.")
+tab(x + 58, 74, 62, 15, "Gen1 Rate Src", "G1 Src", ["MAN", "PED"], 0, "g1_src",
+    tip="MAN: Rate knob sets the speed. PED: the Pedal sets the speed (0.1-18 Hz).")
 
 # PHASOR A
-x = 124; group(x, 150, "PHASOR A")
-dial(x + 4, DY, "A Depth", "A Depth", 0, 100, 80, 5, "a_depth", scale=0.01)
-dial(x + 52, DY, "A Feedback", "A Fdbk", 0, 100, 35, 5, "a_fb", scale=0.01)
-block(x + 4, 80, 142, 30)
-label(x + 6, 81, 138, "SWEEP")
-tab(x + 8, 93, 134, 14, "A Sweep", "A Sweep", ["GEN 1", "PED", "ENV"], 0, "a_sweep", style=lever(LEVER_BLUE))
-txt(x + 4, 120, 70, 20, "A On", "A On", "PHASOR A", "PHASOR A", 1, "a_on")
-led(x + 82, 124, 4)
-label(x + 98, 124, 50, "ACTIVE", 7.5, 0)
+x = XA
+dial(x + 8, 44, "A Depth", "A Depth", 0, 100, 80, 5, "a_depth", scale=0.01, w=74, h=70, acc=ACC_A,
+     tip="How far the sweep moves Phasor A's notches.")
+dial(x + 86, 44, "A Feedback", "A Fdbk", 0, 100, 35, 5, "a_fb", scale=0.01, w=74, h=70, acc=ACC_A,
+     tip="Resonance between the notches. Adds level at high settings.")
+label(x + 10, 118, 80, "SWEEP")
+tab(x + 8, 132, 152, 17, "A Sweep", "A Sweep", ["GEN 1", "PED", "ENV"], 0, "a_sweep", acc=ACC_A,
+    tip="What moves Phasor A: Gen 1, the Pedal, or the input envelope.")
+txt(x + 116, TOP + 4, 44, 15, "A On", "A On", "OFF", "ON", 1, "a_on", acc=ACC_A,
+    tip="Phasor A footswitch. Optical fade in VINTAGE (FADE).")
+led(x + 103, TOP + 7, 4, ACC_A)
 
 # PHASOR B
-x = 278; group(x, 214, "PHASOR B")
-dial(x + 4, DY, "B Depth", "B Depth", 0, 100, 80, 5, "b_depth", scale=0.01)
-dial(x + 52, DY, "B Feedback", "B Fdbk", 0, 100, 35, 5, "b_fb", scale=0.01)
-label(x + 104, DY, 104, "SWEEP SYNC")
-tab(x + 104, DY + 12, 104, 15, "B Sync", "B Sync", ["NORM", "REV", "QUAD"], 0, "b_sync", style=lever(LEVER_RED, LEGEND))
-block(x + 102, DY + 32, 108, 34, outlined=True)
-label(x + 104, DY + 33, 104, "PHASOR B INPUT")
-tab(x + 106, DY + 47, 100, 15, "B Input", "B Input", ["IN A", "OUT A", "IN B"], 1, "b_input", style=lever(LEVER_CREAM))
-block(x + 4, 80, 96, 30)
-label(x + 6, 81, 92, "SWEEP")
-tab(x + 8, 93, 88, 14, "B Sweep", "B Sweep", ["G1", "G2", "PED", "ENV"], 0, "b_sweep", style=lever(LEVER_CREAM))
-txt(x + 4, 120, 70, 20, "B On", "B On", "PHASOR B", "PHASOR B", 0, "b_on")
-led(x + 82, 124, 5)
-label(x + 98, 124, 50, "ACTIVE", 7.5, 0)
+x = XB
+dial(x + 8, 44, "B Depth", "B Depth", 0, 100, 80, 5, "b_depth", scale=0.01, w=68, h=70, acc=ACC_B,
+     tip="How far the sweep moves Phasor B's notches.")
+dial(x + 76, 44, "B Feedback", "B Fdbk", 0, 100, 35, 5, "b_fb", scale=0.01, w=68, h=70, acc=ACC_B,
+     tip="Resonance between the notches. Two phasors in series add up to about +25 dB at full feedback.")
+label(x + 150, 43, 92, "SWEEP SYNC")
+tab(x + 150, 56, 94, 15, "B Sync", "B Sync", ["NORM", "REV", "QUAD"], 0, "b_sync", acc=ACC_B,
+    tip="B's sweep relative to A on Gen 1: NORM in phase, REV opposite, QUAD 90 degrees ahead.")
+label(x + 150, 78, 92, "INPUT")
+B_INPUT = tab(x + 150, 91, 94, 15, "B Input", "B Input", ["IN A", "OUT A", "IN B"], 1, "b_input", acc=ACC_B,
+    tip="IN A: parallel with A. OUT A: series after A (double depth). IN B: right input channel.")
+label(x + 10, 118, 80, "SWEEP")
+tab(x + 8, 132, 236, 17, "B Sweep", "B Sweep", ["G1", "G2", "PED", "ENV"], 0, "b_sweep", acc=ACC_B,
+    tip="What moves Phasor B: Gen 1, Gen 2, the Pedal, or the input envelope.")
+txt(x + 198, TOP + 4, 46, 15, "B On", "B On", "OFF", "ON", 0, "b_on", acc=ACC_B,
+    tip="Phasor B footswitch.")
+led(x + 185, TOP + 7, 5, ACC_B)
 
-# SWEEP GENERATOR 2
-x = 496; group(x, 112, "SWEEP GEN 2")
-dial(x + 4, DY, "Gen2 Rate", "G2 Rate", 0.1, 18.0, 3.5, 3, "g2_rate", exp=3.0)
-label(x + 54, DY + 2, 52, "SHAPE")
-tab(x + 54, DY + 14, 52, 15, "Gen2 Shape", "G2 Shape", ["SINE", "SQR"], 0, "g2_shape", style=lever(LEVER_GREY))
-# S1: envelope sweep source, placed in the unused lower half of the Gen 2 panel (no layout change elsewhere)
-add(ui.panel(nid("div"), [x + 6, 76, 100, 1], bgcolor=SILVER, bgfillcolor={"type": "color", "color": SILVER}))
-label(x + 4, 79, 104, "ENVELOPE (ENV)")
-dial(x + 2, 92, "Env Amount", "Env Amt", 0, 100, 50, 5, "env_amt", scale=0.01, w=36, h=44)
-dial(x + 38, 92, "Env Attack", "Env Atk", 1, 100, 10, 2, "env_att", exp=2.0, w=36, h=44)
-dial(x + 74, 92, "Env Release", "Env Rel", 20, 2000, 250, 2, "env_rel", exp=2.0, w=36, h=44)
-tab(x + 6, 140, 100, 14, "Env Polarity", "Env Pol", ["UP", "DOWN"], 0, "env_pol")
+# SWEEP GENERATOR 2 (Modulation, left column, lower row)
+x = XM
+rect(x + 8, 98, 112, 1, SECTION_LINE)
+label(x + 60, 104, 60, "GEN 2", size=8, bold=True)
+dial(x + 6, 104, "Gen2 Rate", "G2 Rate", 0.1, 18.0, 3.5, 3, "g2_rate", exp=3.0, w=46, h=48,
+     tip="Sweep generator 2 speed, 0.1-18 Hz. Used by Phasor B when B Sweep = G2.")
+tab(x + 58, 118, 62, 15, "Gen2 Shape", "G2 Shape", ["SINE", "SQR"], 0, "g2_shape", tip="Gen 2 waveform.")
+rect(x + 126, 44, 1, 112, SECTION_LINE)
+label(x + 186, 43, 120, "ENVELOPE", bold=True)
+dial(x + 182, 55, "Env Amount", "Env Amt", 0, 100, 50, 5, "env_amt", scale=0.01, w=44, h=48,
+     tip="Envelope sensitivity. 100 % reaches full sweep at -12 dBFS peaks.")
+dial(x + 226, 55, "Env Attack", "Env Atk", 1, 100, 10, 2, "env_att", exp=2.0, w=44, h=48, tip="Envelope rise time.")
+dial(x + 270, 55, "Env Release", "Env Rel", 20, 2000, 250, 2, "env_rel", exp=2.0, w=44, h=48, tip="Envelope fall time.")
+tab(x + 184, 110, 128, 15, "Env Polarity", "Env Pol", ["UP", "DOWN"], 0, "env_pol",
+    tip="UP: louder opens the sweep. DOWN: louder closes it.")
+label(x + 184, 130, 130, "Active when a Sweep is ENV", size=8)
+rect(x + 176, 44, 1, 112, SECTION_LINE)
 
-# PEDAL (stands in for the C-100 optical pedal; map it to an expression pedal / macro)
-x = 612; group(x, 62, "PEDAL")
-dial(x + 8, DY, "Pedal", "Pedal", 0, 100, 50, 5, "pedal", scale=0.01)
-label(x + 2, DY + 54, 58, "map to", 7.5)
-label(x + 2, DY + 64, 58, "expression", 7.5)
+# PEDAL
+label(x + 134, 43, 40, "PEDAL", bold=True)
+dial(x + 130, 55, "Pedal", "Pedal", 0, 100, 50, 5, "pedal", scale=0.01, w=44, h=48,
+     tip="Manual sweep position (or Gen 1 speed when Rate Src = PED). Map it to an expression pedal.")
+label(x + 132, 108, 44, "map to", size=8)
+label(x + 132, 120, 44, "expr.", size=8)
+label(x + 132, 132, 44, "pedal", size=8)
 
 # OUTPUT / ROUTING
-x = 678; group(x, 172, "OUTPUT")
-dial(x + 4, DY, "Mix", "Mix", 0, 100, 50, 5, "mixamt", scale=0.01)
-dial(x + 62, DY, "Drive", "Drive", -24, 24, 0, 4, "drive")
-dial(x + 120, DY, "Output", "Output", -24, 12, 0, 4, "outgain", w=46)
-txt(x + 4, 78, 54, 16, "Full Wet", "FullWet", "FULL WET", "FULL WET", 0, "fullwet")
-menu(x + 62, 78, 104, "Out Mode", "OutMode", ["Out A | Out B", "Out B (mono)", "Out A (mono)", "A + B (mono)"], 1, "outmode")
-txt(x + 4, 98, 54, 16, "In A Sum", "InSum", "IN A = L", "IN A = L+R", 1, "insum")
-label(x + 62, 98, 40, "ROUTE", 7.5, 0)
-menu(x + 96, 98, 70, "Route", "Route", ["Track", "Dry + Bus", "Bus only"], 0, "route")
-label(x + 4, 120, 60, "SEND BUS", 7.5, 0)
-bus = menu(x + 62, 118, 50, "Bus", "Bus", [f"Bus {i}" for i in range(1, 9)], 0)
+x = XO
+dial(x + 6, 44, "Mix", "Mix", 0, 100, 50, 5, "mixamt", scale=0.01, w=54, h=56,
+     tip="Dry/phased blend. 50 % is the original's fixed blend.")
+dial(x + 62, 44, "Drive", "Drive", -24, 24, 0, 4, "drive", w=54, h=56,
+     tip="Level into the circuit. With CLIP on (VINTAGE) this sets how hard the op-amps are hit.")
+dial(x + 118, 44, "Output", "Output", -24, 12, 0, 4, "outgain", w=54, h=56, tip="Output level.")
+txt(x + 6, 104, 80, 15, "Full Wet", "FullWet", "FULL WET", "FULL WET", 0, "fullwet",
+    tip="Phased signal only, whatever the Mix setting.")
+menu(x + 90, 104, 80, "Out Mode", "OutMode", ["Out A | Out B", "Out B (mono)", "Out A (mono)", "A + B (mono)"], 1, "outmode",
+     tip="Which phasor reaches which output channel.")
+txt(x + 6, 124, 80, 15, "In A Sum", "InSum", "IN A = L", "IN A = L+R", 1, "insum",
+    tip="Phasor A input: left channel, or left and right summed.")
+menu(x + 90, 124, 80, "Route", "Route", ["Track", "Dry + Bus", "Bus only"], 0, "route",
+     tip="Dry + Bus: dry stays on this track, phased signal goes to outputs 3/4 (pick them with Audio From on another track).")
+label(x + 8, 145, 40, "BUS", size=8)
+bus = menu(x + 36, 144, 50, "Bus", "Bus", [f"Bus {i}" for i in range(1, 9)], 0,
+           tip="Legacy bus number for the Twin Phasor Return device.")
+label(x + 90, 145, 84, "+ outputs 3/4", size=8)
 # bus -> send~ set
 y0 = 1500
 p1 = add(newobj("bus_add", "+ 1", numinlets=2, numoutlets=1, outlettype=["int"], patching_rect=[150, y0, 40, 22]))
@@ -362,30 +430,52 @@ sl = add(newobj("bus_sl", "prepend set", numinlets=1, numoutlets=1, outlettype=[
 sr_ = add(newobj("bus_sr", "prepend set", numinlets=1, numoutlets=1, outlettype=[""], patching_rect=[290, y0 + 78, 80, 22]))
 line(bus, 0, p1, 0); line(p1, 0, tt, 0); line(tt, 0, fl, 0); line(tt, 1, fr, 0)
 line(fl, 0, sl, 0); line(fr, 0, sr_, 0); line(sl, 0, SL, 0); line(sr_, 0, SR, 0)
-label(x + 116, 120, 54, "+ Out 3/4", 7.5, 0)
-label(x + 4, 138, 164, "Other track: Audio From > 3/4", 7.0, 0)
 
 # CHARACTER / QUIRKS
-x = 854; group(x, 202, "CHARACTER")
-tab(x + 6, DY, 190, 16, "Character", "Character", ["VINTAGE", "MODERN"], 0, "vintage_inv")
-quirks = [("LAG", "Photocell lag", "q_lag_p", 1), ("CELLS", "Cell mismatch", "q_mis_p", 1),
-          ("LAW", "LED sweep law", "q_law_p", 1), ("RANGE", "220k range", "q_rng_p", 1),
-          ("CLIP", "Op-amp clip", "q_clip_p", 1), ("HISS", "Hiss", "q_noise_p", 1),
-          ("HUM", "Mains hum", "q_hum_p", 0), ("FADE", "Optical bypass", "q_fade_p", 1),
-          ("LFO", "Shaped tri LFO", "q_lfo_p", 1), ("BW", "Circuit bandwidth", "q_bw_p", 1)]
-for i, (short, longn, param, init) in enumerate(quirks):
-    cx = x + 6 + (i % 5) * 38
-    cy = DY + 22 + (i // 5) * 18
-    txt(cx, cy, 36, 15, longn, short, short, short, init, param)
-label(x + 6, 84, 40, "HUM Hz", 7.5, 0)
-tab(x + 44, 82, 50, 15, "Hum Freq", "Hum Hz", ["50", "60"], 0, "hum_hz")
-label(x + 102, 84, 96, "MODERN RANGE", 7.5, 0)
-dial(x + 100, 98, "Modern Lo", "Mod Lo", 20, 2000, 150, 3, "mod_lo", exp=3.0, w=46, h=48)
-dial(x + 150, 98, "Modern Hi", "Mod Hi", 500, 18000, 9000, 3, "mod_hi", exp=3.0, w=46, h=48)
-label(x + 6, 104, 92, "Vintage: quirks", 7.5, 0)
-label(x + 6, 116, 92, "on as lit.", 7.5, 0)
-label(x + 6, 128, 92, "Modern: all off,", 7.5, 0)
-label(x + 6, 140, 92, "clean + matched.", 7.5, 0)
+x = XC
+tab(x + 94, TOP + 4, 96, 15, "Character", "Character", ["VINTAGE", "MODERN"], 0, "vintage_inv",
+    tip="VINTAGE: the lit quirks below are active. MODERN: all quirks off, matched cells, clean sweep between Lo and Hi.")
+quirks = [("LAG", "Photocell lag", "q_lag_p", 1, "Cells light fast, darken slowly."),
+          ("CELLS", "Cell mismatch", "q_mis_p", 1, "Unmatched cells and LEDs."),
+          ("LAW", "LED sweep law", "q_law_p", 1, "Sweep lingers high, dives at the bottom."),
+          ("RANGE", "220k range", "q_rng_p", 1, "Low-end floor around 46 Hz."),
+          ("CLIP", "Op-amp clip", "q_clip_p", 1, "Op-amp saturation in the feedback loop."),
+          ("HISS", "Hiss", "q_noise_p", 1, "Circuit noise floor."),
+          ("HUM", "Mains hum", "q_hum_p", 0, "Mains hum at the frequency below."),
+          ("FADE", "Optical bypass", "q_fade_p", 1, "Soft switch-in, slow tail-out."),
+          ("LFO", "Shaped tri LFO", "q_lfo_p", 1, "Triangle-based 'sine' sweep."),
+          ("BW", "Circuit bandwidth", "q_bw_p", 1, "Input and feedback bandwidth limits.")]
+for i, (short, longn, param, init, tip) in enumerate(quirks):
+    txt(x + 6 + (i % 5) * 37, 46 + (i // 5) * 19, 35, 15, longn, short, short, short, init, param,
+        tip=tip + " Active in VINTAGE.")
+label(x + 8, 89, 40, "HUM Hz", size=8)
+tab(x + 50, 87, 60, 14, "Hum Freq", "Hum Hz", ["50", "60"], 0, "hum_hz", tip="Mains frequency for HUM.")
+label(x + 8, 107, 120, "MODERN RANGE", size=8)
+dial(x + 6, 117, "Modern Lo", "Mod Lo", 20, 2000, 150, 3, "mod_lo", exp=3.0, w=44, h=44,
+     tip="MODERN mode: lowest corner frequency of the sweep.")
+dial(x + 52, 117, "Modern Hi", "Mod Hi", 500, 18000, 9000, 3, "mod_hi", exp=3.0, w=44, h=44,
+     tip="MODERN mode: highest corner frequency of the sweep.")
+label(x + 104, 118, 88, "Lit quirks act", size=8)
+label(x + 104, 130, 88, "in VINTAGE only", size=8)
+
+# ---- live routing readout in the header: one line per B Input setting, only the active one shown ----
+label(640, 5, 50, "SIGNAL", size=8, bold=True)
+flows = ["IN  →  A  ∥  B  →  OUT        (parallel)", "IN  →  A  →  B  →  OUT        (series)",
+         "L  →  A        R  →  B        (separate)"]
+sel = add(newobj(nid("sel"), "sel 0 1 2", numinlets=2, numoutlets=4, outlettype=["bang"] * 3 + [""], patching_rect=[30, 1700, 70, 22]))
+line(B_INPUT, 0, sel, 0)
+fids = []
+for k, ftxt in enumerate(flows):
+    c = ui.comment(nid("flow"), [688, 5, 300, 13], ftxt, textcolor=INK, fontsize=8.5, fontname=FONT, justification=0)
+    c["box"]["hidden"] = 0 if k == 1 else 1      # default B Input = OUT A
+    fids.append(add(c))
+for k in range(3):
+    show = add(newobj(nid("msg"), f"t b b", numinlets=1, numoutlets=2, outlettype=["bang", "bang"], patching_rect=[30 + 120 * k, 1730, 40, 22]))
+    line(sel, k, show, 0)
+    for j, fid in enumerate(fids):
+        m = add({"box": {"id": nid("m"), "maxclass": "message", "text": f"hidden {0 if j == k else 1}", "numinlets": 2,
+                         "numoutlets": 1, "outlettype": [""], "patching_rect": [30 + 120 * k, 1760 + 26 * j, 60, 22]}})
+        line(show, 0 if j == k else 1, m, 0); line(m, 0, fid, 0)
 
 # the Character tab sends 0=VINTAGE, 1=MODERN: invert into gen's 'vintage'
 for b in boxes:
@@ -398,6 +488,15 @@ for b in boxes:
         src["patchline"]["source"] = [inv, 0]
         line(orig[0], orig[1], inv, 0)
 
+# compatibility names used by the Return device below
+BLACK, LEGEND, SILVER = CTRL, INK, ACC_N
+DIAL_STYLE = dict(activedialcolor=ACC_N, dialcolor=TRACK, needlecolor=INK, activeneedlecolor=INK, textcolor=INK,
+                  focusbordercolor=ACC_N, fontname=FONT, fontsize=9.0)
+
+
+def group(x, w, title):
+    section(x, w, title, ACC_N)
+
 patch = build_patcher(boxes, lines, name="Twin Phasor 76", width=W, height=H)
 patch["patcher"]["description"] = "Dual 6-stage optical phasor modelled on the 1975 Bi-Phase circuit, with switchable vintage quirks."
 stamp(patch)
@@ -408,11 +507,9 @@ stamp(patch)
 boxes, lines = [], []
 _py[0] = 500
 RW = 200
-add(ui.panel("bg_case", [0, 0, RW, H], bgcolor=CASE, bgfillcolor={"type": "color", "color": CASE}))
-add(ui.panel("bg_face", [3, 3, RW - 6, H - 6], bgcolor=FACE_DARK, rounded=4,
-             bgfillcolor={"type": "gradient", "color1": FACE_DARK, "color2": FACE_LITE, "color": FACE_DARK,
-                          "angle": 0.0, "proportion": 0.5, "autogradient": 0}))
-group(8, RW - 16, "PHASOR RETURN")
+deco(ui.panel("bg_face", [0, 0, RW, H], bgcolor=FACE_DARK, bgfillcolor=fill(FACE_DARK)))
+label(10, 4, 180, "TWIN PHASOR RETURN", size=11, color=INK, bold=True)
+group(8, RW - 16, "LEGACY BUS")
 PIN = add(newobj("plugin", "plugin~", numinlets=1, numoutlets=2, outlettype=["signal", "signal"], patching_rect=[30, 250, 60, 22]))
 POUT = add(newobj("plugout", "plugout~", numinlets=2, numoutlets=0, patching_rect=[30, 450, 60, 22]))
 RL = add(newobj("recvL", "receive~ tpx_bus1_L", numinlets=1, numoutlets=1, outlettype=["signal"], patching_rect=[150, 250, 120, 22]))
@@ -426,21 +523,20 @@ sumR = add(newobj("sumR", "+~", numinlets=2, numoutlets=1, outlettype=["signal"]
 line(RL, 0, gl, 0); line(RR, 0, gr, 0); line(PIN, 0, tl, 0); line(PIN, 1, tr, 0)
 line(tl, 0, sumL, 0); line(gl, 0, sumL, 1); line(tr, 0, sumR, 0); line(gr, 0, sumR, 1)
 line(sumL, 0, POUT, 0); line(sumR, 0, POUT, 1)
-label(14, 26, 60, "BUS", 8.0, 0)
-rb = add(ui.menu("rbus", "Return Bus", [50, 24, 70, 15], options=[f"Bus {i}" for i in range(1, 9)], shortname="Bus",
+label(16, 47, 40, "BUS", 8.5, 0)
+rb = add(ui.menu("rbus", "Return Bus", [50, 45, 70, 15], options=[f"Bus {i}" for i in range(1, 9)], shortname="Bus",
                  bgcolor=BLACK, activebgcolor=BLACK, textcolor=LEGEND, activetextcolor=LEGEND, tricolor=SILVER,
-                 fontname="Ableton Sans Bold", fontsize=8.5))
+                 fontname=FONT, fontsize=9.0))
 set_init(rb, 0)
-lv = add(ui.dial("rlvl", "Return Level", [14, 48, 50, 52], min_val=-70, max_val=12, initial=0, shortname="Level",
+lv = add(ui.dial("rlvl", "Return Level", [14, 64, 52, 54], min_val=-70, max_val=12, initial=0, shortname="Level",
                  unitstyle=4, **DIAL_STYLE))
-th = add(ui.live_text("rthru", "Track Thru", [80, 62, 100, 18], text_off="TRACK INPUT OFF", text_on="TRACK INPUT ON",
+th = add(ui.live_text("rthru", "Track Thru", [76, 82, 108, 18], text_off="TRACK INPUT OFF", text_on="TRACK INPUT ON",
                       shortname="Thru", bgcolor=BLACK, bgoncolor=SILVER, textcolor=LEGEND, textoncolor=BLACK,
                       activebgcolor=BLACK, activebgoncolor=SILVER, activetextcolor=LEGEND, activetextoncolor=BLACK,
-                      rounded=3.0, fontname="Ableton Sans Bold", fontsize=8.0))
+                      rounded=3.0, fontname=FONT_B, fontsize=8.0))
 set_init(th, 0)
-label(14, 104, 172, "LEGACY: send~ between devices is", 7.5, 0)
-label(14, 116, 172, "unsupported, latency varies.", 7.5, 0)
-label(14, 128, 172, "Prefer Audio From: Twin Phasor 3/4.", 7.5, 0)
+label(16, 122, 172, "send~ between devices is unsupported;", 8, 0)
+label(16, 134, 172, "prefer Audio From > Twin Phasor 3/4.", 8, 0)
 dbt = add(newobj("dbt", "dbtoa", numinlets=1, numoutlets=1, outlettype=[""], patching_rect=[200, 350, 50, 22]))
 line(lv, 0, dbt, 0); line(dbt, 0, gl, 1); line(dbt, 0, gr, 1)
 line(th, 0, tl, 1); line(th, 0, tr, 1)
@@ -453,6 +549,7 @@ sr_ = add(newobj("rb_sr", "prepend set", numinlets=1, numoutlets=1, outlettype=[
 line(rb, 0, p1, 0); line(p1, 0, tt, 0); line(tt, 0, fl, 0); line(tt, 1, fr, 0)
 line(fl, 0, sl, 0); line(fr, 0, sr_, 0); line(sl, 0, RL, 0); line(sr_, 0, RR, 0)
 patch = build_patcher(boxes, lines, name="Twin Phasor Return", width=RW, height=H)
+DEV_NAME[0] = "Twin Phasor Return"
 stamp(patch)
 (OUTDIR / "Twin Phasor Return.amxd").write_bytes(build_amxd(patch, AUDIO_EFFECT))
 (OUTDIR / "Twin Phasor Return.maxpat").write_text(json.dumps(patch, indent=1))

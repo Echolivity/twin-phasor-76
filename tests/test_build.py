@@ -141,6 +141,69 @@ for name, P in devs.items():
 b0 = devs["Twin Phasor 76"]["parameters"]["parameterbanks"]["0"]
 rec("B13", "Push bank 1 'Perform' = depths, feedbacks, rates, pedal, mix", b0["name"] == "Perform" and b0["parameters"] == ["A Depth", "A Feedback", "B Depth", "B Feedback", "Gen1 Rate", "Gen2 Rate", "Pedal", "Mix"], str(b0["parameters"]))
 
+# --- B14/B15 UI redesign: parameter contract identical to S4 (names, ranges, defaults, enums, units, ids, order)
+# Approved display-only changes (same stored values): on/off buttons now read OFF/ON instead of
+# "PHASOR A" in both states (UI redesign 2026-11-18).
+APPROVED = {("A On", "parameter_enum"): ["OFF", "ON"], ("B On", "parameter_enum"): ["OFF", "ON"]}
+contract = json.loads((ROOT / "tests" / "fixtures" / "parameter_contract_s4.json").read_text())
+for name, P in devs.items():
+    now, issues = {}, []
+    order = list(P["parameters"].keys())
+    for b in P["boxes"]:
+        bx = b["box"]; v = bx.get("saved_attribute_attributes", {}).get("valueof")
+        if v:
+            now[v["parameter_longname"]] = (bx, v)
+    want = contract[name]
+    if set(now) != set(want):
+        issues.append(f"names differ: missing {sorted(set(want) - set(now))}, new {sorted(set(now) - set(want))}")
+    for ln, w in want.items():
+        if ln not in now:
+            continue
+        bx, v = now[ln]
+        for k in ["parameter_shortname", "parameter_type", "parameter_mmin", "parameter_mmax", "parameter_enum",
+                  "parameter_initial", "parameter_unitstyle", "parameter_exponent", "parameter_invisible"]:
+            if v.get(k) != w[k] and APPROVED.get((ln, k)) != v.get(k):
+                issues.append(f"{ln}.{k}: {v.get(k)!r} != S4 {w[k]!r}")
+        if bx["maxclass"] != w["maxclass"]:
+            issues.append(f"{ln}: class {bx['maxclass']} != {w['maxclass']}")
+        if bx["id"] != w["s4_id"]:
+            issues.append(f"{ln}: id {bx['id']} != S4 {w['s4_id']}")
+        if order.index(bx["id"]) != w["s4_order"]:
+            issues.append(f"{ln}: order {order.index(bx['id'])} != S4 {w['s4_order']}")
+    rec("B14", f"{name}: parameter contract identical to S4 (names, ranges, defaults, enums, units, ids, order)", not issues,
+        "; ".join(issues[:6]) or f"{len(want)} parameters unchanged")
+    # every control is visible in presentation and inside the device, and no two controls overlap
+    ctl = [b for b, _ in now.values() if b["maxclass"] != "newobj"]
+    Wd = max(b["presentation_rect"][0] + b["presentation_rect"][2] for b in ctl)
+    bad = [b["varname"] for b in ctl if not b.get("presentation") or b["presentation_rect"][1] < 0 or
+           b["presentation_rect"][1] + b["presentation_rect"][3] > 169 or b.get("background")]
+    ov = []
+    for i, a in enumerate(ctl):
+        for c in ctl[i + 1:]:
+            ax, ay, aw, ah = a["presentation_rect"]; cx, cy, cw, ch = c["presentation_rect"]
+            if ax < cx + cw and cx < ax + aw and ay < cy + ch and cy < ay + ah:
+                ov.append(f"{a['varname']}/{c['varname']}")
+    rec("B15", f"{name}: every control on the panel, inside 169 px, in the foreground, none overlapping", not bad and not ov,
+        f"off-panel/background: {bad}; overlaps: {ov}" if bad or ov else f"{len(ctl)} controls, device width {Wd:.0f} px")
+
+# --- B16 routing readout: exactly one line visible, follows B Input -----------------------------------
+M = devs["Twin Phasor 76"]
+bx = {b["box"]["id"]: b["box"] for b in M["boxes"]}
+flows = [i for i, b in bx.items() if b.get("text", "").startswith(("IN  →", "L  →"))]
+binput = next(i for i, b in bx.items() if b.get("saved_attribute_attributes", {}).get("valueof", {}).get("parameter_longname") == "B Input")
+sel = next(l["patchline"]["destination"][0] for l in M["lines"] if l["patchline"]["source"][0] == binput and bx[l["patchline"]["destination"][0]].get("text") == "sel 0 1 2")
+reach = {f: set() for f in flows}
+for k in range(3):
+    trig = next(l["patchline"]["destination"][0] for l in M["lines"] if l["patchline"]["source"] == [sel, k])
+    for l in M["lines"]:
+        if l["patchline"]["source"][0] == trig:
+            m = l["patchline"]["destination"][0]
+            tgt = next(l2["patchline"]["destination"][0] for l2 in M["lines"] if l2["patchline"]["source"][0] == m)
+            reach[tgt].add((k, bx[m]["text"]))
+ok = len(flows) == 3 and sum(1 for f in flows if not bx[f].get("hidden")) == 1 and \
+    all(sum(1 for f in flows if (k, "hidden 0") in reach[f]) == 1 and sum(1 for f in flows if (k, "hidden 1") in reach[f]) == 2 for k in range(3))
+rec("B16", "routing readout: 3 lines, one visible by default, each B Input value shows one and hides two", ok, f"{len(flows)} lines")
+
 failed = [r for r in results if r["status"] == "FAIL"]
 print(f"\n{len(results) - len(failed)}/{len(results)} passed")
 if "--json" in sys.argv:

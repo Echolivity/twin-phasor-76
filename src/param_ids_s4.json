@@ -1,0 +1,186 @@
+{
+ "Twin Phasor 76": {
+  "220k range": [
+   "obj-132",
+   32
+  ],
+  "A Depth": [
+   "obj-20",
+   3
+  ],
+  "A Feedback": [
+   "obj-23",
+   4
+  ],
+  "A On": [
+   "obj-30",
+   6
+  ],
+  "A Sweep": [
+   "obj-28",
+   5
+  ],
+  "B Depth": [
+   "obj-42",
+   7
+  ],
+  "B Feedback": [
+   "obj-45",
+   8
+  ],
+  "B Input": [
+   "obj-53",
+   10
+  ],
+  "B On": [
+   "obj-59",
+   12
+  ],
+  "B Sweep": [
+   "obj-57",
+   11
+  ],
+  "B Sync": [
+   "obj-49",
+   9
+  ],
+  "Bus": [
+   "obj-113",
+   27
+  ],
+  "Cell mismatch": [
+   "obj-128",
+   30
+  ],
+  "Character": [
+   "obj-124",
+   28
+  ],
+  "Circuit bandwidth": [
+   "obj-144",
+   38
+  ],
+  "Drive": [
+   "obj-99",
+   21
+  ],
+  "Env Amount": [
+   "obj-78",
+   15
+  ],
+  "Env Attack": [
+   "obj-81",
+   16
+  ],
+  "Env Polarity": [
+   "obj-85",
+   18
+  ],
+  "Env Release": [
+   "obj-83",
+   17
+  ],
+  "Full Wet": [
+   "obj-103",
+   23
+  ],
+  "Gen1 Rate": [
+   "obj-10",
+   0
+  ],
+  "Gen1 Rate Src": [
+   "obj-16",
+   2
+  ],
+  "Gen1 Shape": [
+   "obj-13",
+   1
+  ],
+  "Gen2 Rate": [
+   "obj-71",
+   13
+  ],
+  "Gen2 Shape": [
+   "obj-74",
+   14
+  ],
+  "Hiss": [
+   "obj-136",
+   34
+  ],
+  "Hum Freq": [
+   "obj-147",
+   39
+  ],
+  "In A Sum": [
+   "obj-107",
+   25
+  ],
+  "LED sweep law": [
+   "obj-130",
+   31
+  ],
+  "Mains hum": [
+   "obj-138",
+   35
+  ],
+  "Mix": [
+   "obj-96",
+   20
+  ],
+  "Modern Hi": [
+   "obj-152",
+   41
+  ],
+  "Modern Lo": [
+   "obj-150",
+   40
+  ],
+  "Op-amp clip": [
+   "obj-134",
+   33
+  ],
+  "Optical bypass": [
+   "obj-140",
+   36
+  ],
+  "Out Mode": [
+   "obj-105",
+   24
+  ],
+  "Output": [
+   "obj-101",
+   22
+  ],
+  "Pedal": [
+   "obj-89",
+   19
+  ],
+  "Photocell lag": [
+   "obj-126",
+   29
+  ],
+  "Route": [
+   "obj-110",
+   26
+  ],
+  "Shaped tri LFO": [
+   "obj-142",
+   37
+  ]
+ },
+ "Twin Phasor Return": {
+  "Return Bus": [
+   "obj-16",
+   0
+  ],
+  "Return Level": [
+   "obj-17",
+   1
+  ],
+  "Track Thru": [
+   "obj-18",
+   2
+  ]
+ }
+}
